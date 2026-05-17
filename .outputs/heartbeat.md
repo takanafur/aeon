@@ -2,17 +2,15 @@
 
 ## Summary
 
-Ran heartbeat checks at 2026-05-17 14:33 UTC. All clear across all priority tiers:
+Ran heartbeat at 21:05 UTC. All priority checks clean:
 
-- **P0** — `cron-state.json` is empty `{}`, so no failed, stuck, degraded, or chronic skills to flag.
-- **P1** — No open PRs (`gh pr list` returned `[]`); no urgent-labeled issues.
-- **P2** — Nothing in `memory/MEMORY.md` requires follow-up.
-- **P3** — Only `heartbeat` is enabled in `aeon.yml`; no other scheduled skills to audit for staleness.
+- **P0** — `memory/cron-state.json` has only `heartbeat` (last_status: success, last_success 14:33 UTC / ~6.5h ago). No failed/stuck/degraded/chronic skills.
+- **P1** — 0 open PRs; issues disabled on this repo.
+- **P2** — no MEMORY.md follow-up flags.
+- **P3** — only `heartbeat` is enabled in `aeon.yml`; no other scheduled skills to evaluate.
 
 **Files modified:**
-- `docs/status.md` — regenerated; verdict 🟢 OK, next run = heartbeat at 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md` exists yet).
-- `memory/logs/2026-05-17.md` — created with today's heartbeat log entry.
+- `docs/status.md` — regenerated, 🟢 OK, heartbeat row now reflects the 14:33 UTC success (prior page still showed "not yet run"). Next scheduled run: heartbeat at 08:00 UTC. Token pulse section omitted (no `articles/token-report-*.md` exists).
+- `memory/logs/2026-05-17.md` — appended heartbeat entry.
 
-**Notification:** none sent — nothing needed attention.
-
-**Follow-up:** none required this cycle.
+No notification sent (nothing needed attention).
