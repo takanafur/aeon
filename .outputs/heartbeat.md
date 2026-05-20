@@ -2,15 +2,14 @@
 
 ## Summary
 
-Ran the heartbeat checks — everything green.
+Ran heartbeat checks at 14:06 UTC. All clear:
+- **P0**: only `heartbeat` in `cron-state.json`, last_status success ~6h ago, 100% success rate (7/7), no failures/stuck/chronic flags.
+- **P1**: 0 open PRs, issues disabled on repo.
+- **P2**: nothing flagged in `MEMORY.md`.
+- **P3**: heartbeat last_success well inside 12h threshold (2× 6h interval).
 
-- **P0**: `memory/cron-state.json` shows only `heartbeat` (last_status: success, last_success 2026-05-19 20:20 UTC ~12h ago, success_rate 100% over 6/6 runs, consecutive_failures 0). Self-check inside 36h window. No failed/stuck/degraded/chronic skills.
-- **P1**: 0 open PRs. Issues disabled on repo.
-- **P2**: nothing flagged in `memory/MEMORY.md`.
-- **P3**: only `heartbeat` is enabled in `aeon.yml`; last_success ~12h ago is just inside the 2× schedule interval (12h) — no staleness flag.
+Files modified:
+- `docs/status.md` — regenerated with 🟢 OK verdict, next run at 20:00 UTC, no token pulse section (no `articles/token-report-*.md`).
+- `memory/logs/2026-05-20.md` — appended 14:06 UTC heartbeat log entry.
 
-**Files modified:**
-- `docs/status.md` — rewrote → 🟢 OK, next run heartbeat 14:00 UTC, no token-report so Token pulse section omitted.
-- `memory/logs/2026-05-20.md` — created with run findings.
-
-**No notification sent** — nothing needed attention. **No follow-ups.**
+No notification sent (nothing needed attention).
