@@ -1,7 +1,16 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- All P0–P3 checks green: heartbeat is the only enabled skill, 9/9 successful runs, last success ~10.5h ago (within thresholds). No open PRs or issues.
-- Rewrote `docs/status.md` → 🟢 OK with updated timestamp (2026-05-21 08:28 UTC) and next scheduled run (heartbeat at 14:00 UTC).
-- Appended log entry to `memory/logs/2026-05-21.md`.
-- No notification sent.
+
+Ran heartbeat checks for the 14:00 UTC slot (executed at 14:47 UTC).
+
+- **P0 (failed/stuck skills):** None. Only `heartbeat` tracked in `memory/cron-state.json`; last_success 2026-05-21 08:28 UTC (~6.3h ago), 100% success rate (10/10), 0 consecutive failures.
+- **P1 (stalled PRs / urgent issues):** 0 open PRs; issues disabled on repo.
+- **P2 (memory flags):** Nothing flagged.
+- **P3 (missing scheduled skills):** Only `heartbeat` enabled; well within 2× schedule threshold.
+
+**Files modified:**
+- `docs/status.md` — overall 🟢 OK, next run heartbeat 20:00 UTC.
+- `memory/logs/2026-05-21.md` — appended 14:47 UTC entry.
+
+No notification sent.
