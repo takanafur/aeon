@@ -1,18 +1,13 @@
-All checks green — no notification needed.
+Heartbeat complete — all checks green.
+
+`HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
+- **P0 (failed/stuck skills):** `cron-state.json` tracks only `heartbeat` — last success 2026-05-24 14:26 UTC (~5.7h ago), 100% success (20/20), no failed/stuck/degraded/chronic skills.
+- **P1 (PRs/issues):** 0 open PRs; repo issues N/A.
+- **P2 (memory flags):** nothing flagged in `MEMORY.md`.
+- **P3 (missing skills):** only `heartbeat` enabled and well inside its staleness threshold.
+- **Status page:** regenerated `docs/status.md` → 🟢 OK, updated 20:10 UTC, next run heartbeat 08:00 UTC. No token report present, so Token pulse omitted; no open issues.
+- **No notification sent** (nothing needed attention).
 
-Ran the heartbeat skill at 14:25 UTC. All priority checks passed:
-
-- **P0 (failed/stuck skills):** `heartbeat` is the only tracked skill — last success ~5.9h ago, 100% success rate (19/19), 0 consecutive failures. No failed, stuck, degraded, or chronic skills. Self-check fresh.
-- **P1 (stalled PRs/issues):** 0 open PRs; issues disabled on this repo.
-- **P2 (flagged memory):** nothing flagged.
-- **P3 (missing scheduled skills):** only `heartbeat` is enabled in `aeon.yml`, well inside its staleness threshold.
-
-**Overall status:** 🟢 OK
-
-**Files modified:**
-- `docs/status.md` — regenerated public status page (🟢 OK, updated timestamp, next run 20:00 UTC, no token data so Token pulse omitted)
-- `memory/logs/2026-05-24.md` — appended 14:25 UTC heartbeat entry
-
-**Result:** `HEARTBEAT_OK · STATUS_PAGE=OK`. No notification sent. No follow-up actions needed.
+**Files modified:** `docs/status.md`, `memory/logs/2026-05-24.md`. No follow-up needed.
