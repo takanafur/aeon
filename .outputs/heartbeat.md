@@ -1,18 +1,16 @@
-All checks complete.
-
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-05-23 20:50 UTC slot. All priority tiers green — no notification sent.
+Ran the heartbeat skill — all checks green, nothing needed attention, so no notification sent.
 
-- **P0 (failed/stuck skills):** `memory/cron-state.json` tracks only `heartbeat` (last_status success, 17/17 runs, 0 consecutive failures, last success ~6.8h ago — inside the 36h self-check window). No failures, stuck dispatches, degradation, or chronic-failure flags.
-- **P1 (PRs/issues):** 0 open PRs; repo has issues disabled (urgent-label check N/A).
-- **P2 (memory flags):** nothing flagged in `MEMORY.md`.
-- **P3 (missing skills):** only `heartbeat` is enabled in `aeon.yml`; recent success, no staleness.
+- **P0** — `cron-state.json` shows only `heartbeat` (last success 2026-05-23 20:51 UTC, ~11.7h ago; 100% success rate, 18/18). No failed, stuck, degraded, or chronic skills.
+- **P1** — 0 open PRs; issues disabled on the repo.
+- **P2** — Nothing flagged in `MEMORY.md`.
+- **P3** — Only `heartbeat` enabled in `aeon.yml`; well inside its staleness threshold.
 
 **Files modified:**
-- `docs/status.md` — regenerated, 🟢 OK, Updated 20:50 UTC, next run heartbeat 08:00 UTC. No token report exists, so Token pulse section omitted; no open issues.
-- `memory/logs/2026-05-23.md` — appended the 20:50 UTC heartbeat entry.
+- `docs/status.md` — regenerated → 🟢 OK, updated 2026-05-24 08:33 UTC, next run heartbeat 14:00 UTC. Token pulse omitted (no `token-report-*.md`).
+- `memory/logs/2026-05-24.md` — created with the heartbeat log entry.
 
-**Follow-up:** none required. (Untracked `notify` / `.notify-sent-hashes` in the working tree are pre-existing, unrelated to this run.)
+No follow-up actions needed. The status page lands on `main` via the workflow's auto-commit step.
