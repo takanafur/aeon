@@ -1,11 +1,16 @@
-Heartbeat complete. All checks green.
+All checks are green — no notification needed.
 
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0 (failed/stuck skills):** None. `cron-state.json` tracks only `heartbeat` — success, 23/23 runs, last success 2026-05-26 21:02 UTC (~17h ago, inside the 36h self-check window).
-- **P1 (PRs/issues):** 0 open PRs; issues disabled on repo.
-- **P2 (memory flags):** Nothing flagged for follow-up.
-- **P3 (missing skills):** Only `heartbeat` is enabled; it has a healthy state entry and is dispatching now.
-- **Files modified:** `docs/status.md` (regenerated → 🟢 OK, updated timestamp, next run 20:00 UTC), `memory/logs/2026-05-27.md` (new log entry).
-- **No notification sent** — nothing needed attention. No follow-up actions required.
+Ran the heartbeat skill. All priority checks clean:
+- **P0** (failed/stuck skills): `cron-state.json` tracks only `heartbeat` — last success 2026-05-27 14:19 UTC (~7.5h ago, inside the 36h self-check window), 24/24 successes, 0 consecutive failures.
+- **P1** (PRs/urgent issues): no open PRs, no urgent issues.
+- **P2** (flagged memory): nothing requiring follow-up.
+- **P3** (missing scheduled skills): only `heartbeat` enabled and being dispatched now — scheduler live.
+
+**Files modified:**
+- `docs/status.md` — regenerated, overall 🟢 OK, updated timestamp to 21:55 UTC, next run 08:00 UTC. Token pulse omitted (no token-report article); no open issues.
+- `memory/logs/2026-05-27.md` — appended the 21:55 UTC heartbeat entry.
+
+No notification sent (nothing needed attention). No follow-up actions needed.
