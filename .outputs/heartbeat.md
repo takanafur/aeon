@@ -1,9 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0–P3:** all clean. Only `heartbeat` is enabled; last_success 2026-05-27 21:56 UTC (~12h ago, within 36h window), 25/25 successes. No open PRs, no urgent issues, no flagged memory items, no open issues in `INDEX.md`.
-- **Status page:** rewrote `docs/status.md` → 🟢 OK, Updated 2026-05-28 09:48 UTC, next scheduled run heartbeat at 14:00 UTC. No `articles/token-report-*.md` → Token pulse section omitted.
-- **Log:** appended today's entry to `memory/logs/2026-05-28.md`.
-- **Notification:** none sent — nothing needed attention.
-
-Files modified: `docs/status.md`, `memory/logs/2026-05-28.md` (created).
+- P0 — clean: only `heartbeat` in `cron-state.json`, last_success 2026-05-28 09:49 UTC (~12h ago, inside the 36h self-check window), 26/26 success_rate, 0 consecutive failures.
+- P1 — clean: no open PRs; issues disabled on this repo.
+- P2 — clean: nothing flagged in `memory/MEMORY.md`.
+- P3 — clean: only `heartbeat` is enabled in `aeon.yml`; this 20:00 run is executing now (late at 21:47 UTC), scheduler is live.
+- Status page: rewrote `docs/status.md` → 🟢 OK, next scheduled run heartbeat 08:00 UTC (2026-05-29). No token report present → Token pulse section omitted.
+- Files modified: `docs/status.md`, `memory/logs/2026-05-28.md`. No notification sent.
