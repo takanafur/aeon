@@ -1,10 +1,6 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0: cron-state shows only `heartbeat` (31/31 successes, last_success 14:10 UTC, ~6h ago — self-check OK). No failed/stuck/degraded/chronic skills.
-- P1: 0 open PRs; issues disabled on this repo.
-- P2: nothing flagged in MEMORY.md.
-- P3: only `heartbeat` enabled in `aeon.yml`; scheduler is live (20:00 slot running at 20:15 UTC).
-- Rewrote `docs/status.md` → 🟢 OK. Next scheduled run: heartbeat 08:00 UTC (2026-05-31). Token pulse section omitted (no `articles/token-report-*.md`).
-- Appended 20:15 UTC entry to `memory/logs/2026-05-30.md`.
-- No notification sent — nothing needed attention.
+- All P0–P3 checks clean: heartbeat is the sole enabled skill, 100% success rate (32/32), last success 13h ago (well inside the 36h self-check window). No PRs, memory flags, or open issues.
+- Regenerated `docs/status.md` → 🟢 OK with next run at 14:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
+- Logged the run to `memory/logs/2026-05-31.md`. No notification sent.
