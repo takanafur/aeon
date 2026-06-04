@@ -1,0 +1,115 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert",
+        "stack"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Failed",
+        "message": "Heartbeat run failed at 14:18 UTC",
+        "type": "error"
+      }
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-row",
+        "sep1",
+        "error-details",
+        "sep2",
+        "next-run"
+      ]
+    },
+    "stats-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-failures",
+        "stat-success-rate"
+      ]
+    },
+    "stat-failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "1"
+      }
+    },
+    "stat-success-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "98%"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "error-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "error-heading",
+        "error-signature",
+        "error-cause"
+      ]
+    },
+    "error-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Error Details",
+        "level": "h4"
+      }
+    },
+    "error-signature": {
+      "type": "Text",
+      "props": {
+        "text": "Error signature looks like a zero-token completion (truncated usage JSON)",
+        "variant": "caption"
+      }
+    },
+    "error-cause": {
+      "type": "Text",
+      "props": {
+        "text": "Likely a transient harness/API hiccup",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "next-run": {
+      "type": "Text",
+      "props": {
+        "text": "Next scheduled run: 20:00 UTC",
+        "variant": "lead"
+      }
+    }
+  }
+}
