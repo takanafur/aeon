@@ -1,7 +1,11 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- All P0/P1/P2/P3 checks clean. Only `heartbeat` enabled; `last_success` 2026-06-05 08:36 UTC (5.6h ago), success_rate 98% (43/44), 0 consecutive failures. 0 open PRs, 0 open issues, no token-report articles.
-- Rewrote `docs/status.md` → 🟢 OK (next run: heartbeat at 20:00 UTC).
-- Appended 14:15 UTC entry to `memory/logs/2026-06-05.md`.
-- No notification sent — nothing needed attention.
+
+Heartbeat ran the 20:00 UTC slot (~31min late, typical GHA delay). All checks green: only `heartbeat` is enabled in `aeon.yml`, its last success was 14:16 UTC (~6.3h ago, inside both the 12h 2× schedule window and the 36h self-check window), success rate 98% (44/45), consecutive_failures 0. No open PRs, no flagged memory items, no open issues. The 2026-06-04 14:18 failure recovered cleanly the next dispatch and is already deduped from prior log entries.
+
+Files modified:
+- `docs/status.md` — regenerated as 🟢 OK with updated timestamp/last-run row
+- `memory/logs/2026-06-05.md` — appended 20:31 UTC entry
+
+No notification sent. No follow-ups.
