@@ -1,7 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- All P0–P3 checks clean: heartbeat success_rate 0.98, last_success ~6h ago, 0 open PRs, nothing flagged in MEMORY.md, no open issues, only `heartbeat` enabled in `aeon.yml`.
-- Rewrote `docs/status.md` → 🟢 OK (Updated 2026-06-07 14:28 UTC, next run 20:00 UTC).
-- Appended findings to `memory/logs/2026-06-07.md`.
-- No notification sent (nothing needed attention).
+- All checks green: no failed/stuck skills, 0 open PRs, no flagged memory, heartbeat last success ~5.6h ago (well inside 36h self-check window).
+- Rewrote `docs/status.md` → 🟢 OK; next scheduled run heartbeat 08:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
+- Appended 20:03 UTC entry to `memory/logs/2026-06-07.md` (also restored 14:28 header that an earlier edit had clobbered).
+- No notification sent — nothing needed operator attention.
