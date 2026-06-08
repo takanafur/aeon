@@ -1,7 +1,12 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- All checks green: no failed/stuck skills, 0 open PRs, no flagged memory, heartbeat last success ~5.6h ago (well inside 36h self-check window).
-- Rewrote `docs/status.md` → 🟢 OK; next scheduled run heartbeat 08:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
-- Appended 20:03 UTC entry to `memory/logs/2026-06-07.md` (also restored 14:28 header that an earlier edit had clobbered).
-- No notification sent — nothing needed operator attention.
+
+All checks green at 08:19 UTC (08:00 slot, ~19min scheduler delay):
+- **P0**: only `heartbeat` in cron-state.json — last success 2026-06-07 20:04 UTC (~12h ago, inside self-check window), success rate 98% (51/52), 0 consecutive failures.
+- **P1**: 0 open PRs; issues disabled on this repo.
+- **P2**: no MEMORY.md follow-ups flagged.
+- **P3**: only `heartbeat` enabled and within its 2× window.
+- **Status page**: rewrote `docs/status.md` → 🟢 OK. No `articles/token-report-*.md` → Token pulse omitted. No open issues.
+
+**Files modified**: `docs/status.md`, `memory/logs/2026-06-08.md`. No notification sent (nothing needs attention).
