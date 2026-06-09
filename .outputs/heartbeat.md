@@ -1,7 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0/P1/P2/P3 checks all green: heartbeat `last_success` 2026-06-08T21:20:08Z (~11h ago, inside tolerance), 0 open PRs, no flagged memory items, only `heartbeat` enabled in `aeon.yml`.
-- Rewrote `docs/status.md` → 🟢 OK, next run heartbeat at 14:00 UTC. No token-report article → Token pulse section omitted. No open issues.
-- Logged to `memory/logs/2026-06-09.md`.
+- P0: heartbeat last success 2026-06-09T08:21:32Z (~5.7h ago) — healthy, 98% success rate, 0 consecutive failures.
+- P1: 0 open PRs; issues disabled on repo.
+- P2/P3: nothing flagged; only `heartbeat` enabled in `aeon.yml`.
+- Rewrote `docs/status.md` → 🟢 OK (Updated 14:04 UTC, next run 20:00 UTC).
+- Appended 14:04 UTC entry to `memory/logs/2026-06-09.md`.
 - No notification sent — nothing needed attention.
