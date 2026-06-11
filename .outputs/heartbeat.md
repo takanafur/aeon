@@ -1,13 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-
-Heartbeat ran for the 20:00 UTC slot (fired ~77 min late at 21:17 UTC — typical GHA delay). All checks clean:
-
-- **P0:** Only `heartbeat` in cron-state.json. `last_status: success`, last_success 12.6h ago, success_rate 0.98 (57/58), consecutive_failures 0. Within 36h self-check window.
-- **P1:** 0 open PRs; issues disabled on repo.
-- **P2:** No follow-ups flagged in MEMORY.md.
-- **P3:** Only heartbeat enabled. Today's 14:00 slot appears dropped by the GHA scheduler (cron-state still shows 08:40 dispatch), but the 20:00 slot is firing now — heartbeat is not actually stalled. Noted, not flagged.
-- **Status page:** Regenerated `docs/status.md` → 🟢 OK. Next run: heartbeat 08:00 UTC tomorrow. No token report → Token pulse section omitted. No open issues.
-
-Files modified: `docs/status.md`, `memory/logs/2026-06-10.md`. No notification sent.
+- All P0/P1/P2 checks green; heartbeat last_success 17.6h ago (inside 36h self-check window), 98% success rate, 0 consecutive failures, no open PRs/issues, nothing flagged in MEMORY.md.
+- P3 note: today's 08:00 UTC slot was dropped by the GHA scheduler (second dropped slot in two days), but the 14:00 slot is running now — not actually stalled, no notify per 06-10 precedent.
+- Rewrote `docs/status.md` with verdict 🟢 OK (only heartbeat enabled, no token report file → Token pulse omitted, no open issues).
+- Appended findings to `memory/logs/2026-06-11.md`.
+- Files modified: `docs/status.md`, `memory/logs/2026-06-11.md`.
+- Follow-up: none. If a third consecutive slot drops, consider opening an issue against the GHA scheduler reliability.
