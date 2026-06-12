@@ -1,17 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-
-Ran heartbeat at the 20:00 UTC slot (firing ~61min late, typical GHA delay).
-
-**Checks:**
-- P0: heartbeat is healthy — last success ~6h ago, success_rate 0.98 (59/60), consecutive_failures 0
-- P1: 0 open PRs; issues disabled on repo
-- P2: nothing flagged in MEMORY.md
-- P3: only heartbeat enabled, last success well inside 12h window
-
-**Files modified:**
-- `docs/status.md` — regenerated → 🟢 OK, next run 08:00 UTC
-- `memory/logs/2026-06-11.md` — appended 21:01 UTC entry
-
-No notification sent (nothing needed attention).
+- **P0–P3:** all clean. Only `heartbeat` enabled; cron-state shows `last_status: success`, success_rate 0.98 (60/61), 0 consecutive failures, last success ~12.2h ago (inside 36h self-check window). 0 open PRs, no flagged memory items, no open issues.
+- **Status page:** rewrote `docs/status.md` → 🟢 OK, updated 2026-06-12 09:16 UTC, next run 14:00 UTC. No token report file → Token pulse omitted.
+- **Log:** appended entry to `memory/logs/2026-06-12.md`.
+- **No notification** sent — nothing needed attention.
+- **Files modified:** `docs/status.md`, `memory/logs/2026-06-12.md`.
