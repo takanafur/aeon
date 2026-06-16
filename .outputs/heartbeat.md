@@ -1,7 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0/P1/P2/P3 all green.** Only `heartbeat` is enabled. Last success 2026-06-15T20:05:29Z (~19.5h ago, inside 36h self-check window). success_rate 0.99 (69/70), 0 consecutive failures. 0 open PRs. Nothing flagged in MEMORY.md or issues/INDEX.md.
-- **Schedule context:** This is the 14:00 slot firing ~93min late; 08:00 slot appears dropped (typical intermittent GHA dropout — same pattern as 06-13/14/15).
-- **Files modified:** `docs/status.md` (rewrote → 🟢 OK, next run heartbeat 20:00 UTC); `memory/logs/2026-06-16.md` (new daily log).
-- **No notification sent** — nothing needed attention.
+Ran heartbeat checks at 21:48 UTC (20:00 slot, ~108min late — typical GHA delay).
+- **P0/P1/P2/P3:** all green. Only `heartbeat` is enabled; last_success was 2026-06-16T15:34:03Z (~6.2h ago, well inside its 12h soft window). 0 open PRs, no flagged memory items, no open issues.
+- **Files modified:** `docs/status.md` (refreshed timestamp to 21:48 UTC, next scheduled run 08:00 UTC tomorrow); `memory/logs/2026-06-16.md` (appended this run's entry).
+- **Notifications:** none sent — nothing needed attention.
