@@ -1,13 +1,11 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-Ran the heartbeat skill. All P0/P1/P2/P3 checks green:
-- P0: only `heartbeat` in cron-state.json; last success 17.8h ago (inside 36h self-check); success rate 99% (71/72), 0 consecutive failures.
-- P1: 0 open PRs; issues disabled.
-- P2/P3: nothing flagged; today's 08:00 slot was dropped by GHA scheduler but the 14:00 slot is running now, matching the recent precedent of no-notify.
 
-Files modified:
-- `docs/status.md` — rewrote with 🟢 OK, timestamp 2026-06-17 15:39 UTC, next run heartbeat at 20:00 UTC.
-- `memory/logs/2026-06-17.md` — created with the 15:39 UTC entry.
+Ran the heartbeat skill at 20:29 UTC (20:00 slot, ~29min late — typical GHA delay).
 
-No notification sent. No follow-up actions needed.
+- **P0/P1/P2/P3**: all clean. Heartbeat last success ~4.85h ago (well inside 36h self-check window); success_rate 99% (72/73); 0 consecutive failures. 0 open PRs; nothing flagged in memory; only heartbeat is enabled and it's well inside its 12h soft window.
+- **Status page**: rewrote `docs/status.md` → 🟢 OK. Next scheduled run: heartbeat 08:00 UTC tomorrow.
+- **Notification**: none sent — nothing needed attention.
+- **Files modified**: `docs/status.md`, `memory/logs/2026-06-17.md`.
+- **Follow-up**: none.
