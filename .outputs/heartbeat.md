@@ -1,8 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0/P1/P2/P3 all clean. Only heartbeat enabled (success_rate 99%, last_success ~12h ago, inside soft window).
-- Today's 14:00 slot was dropped (typical GHA scheduler dropout — same pattern as 06-17); current 20:00 slot firing ~71min late.
-- 0 open PRs, no urgent issues, no open items in issues/INDEX.md, no flagged memory items.
-- Rewrote `docs/status.md` → 🟢 OK (next run: heartbeat 08:00 UTC tomorrow). Token pulse section omitted (no `articles/token-report-*.md`).
-- Appended entry to `memory/logs/2026-06-18.md`. No notification sent.
+- All checks green: heartbeat last success ~17.6h ago (within 36h self-check window), success_rate 0.99, 0 consecutive failures, 0 open PRs, 0 open issues, no flagged memory items.
+- Today's 08:00 slot was dropped (recurring GHA scheduler dropout — not actionable, following 6-day precedent).
+- Rewrote `docs/status.md` → 🟢 OK, next scheduled run heartbeat 20:00 UTC.
+- Appended log entry to `memory/logs/2026-06-19.md`.
+- No notification sent.
