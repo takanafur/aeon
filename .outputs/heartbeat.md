@@ -1,16 +1,10 @@
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
+All checks green. P0: `heartbeat` (the only enabled skill) last succeeded 2026-06-20 14:40 UTC (~6h ago), inside the 36h self-check window; success_rate 0.99, 0 consecutive failures. P1: 0 open PRs, issues disabled. P2: nothing flagged in MEMORY.md. P3: heartbeat cadence matches its 6h interval.
 
-Heartbeat ran clean — all P0/P1/P2/P3 checks green.
+Files modified:
+- `docs/status.md` — regenerated, overall 🟢 OK, next run heartbeat at 08:00 UTC.
+- `memory/logs/2026-06-20.md` — appended 20:39 UTC heartbeat entry.
 
-- **P0:** Only `heartbeat` in cron-state.json. `last_status: success` at 08:16 UTC (~6.4h ago, within 36h self-check window). 99% success rate (78/79), 0 consecutive failures. Historic 06-04 failure already covered → deduped.
-- **P1:** 0 open PRs, issues disabled on repo.
-- **P2:** Nothing flagged in `memory/MEMORY.md`.
-- **P3:** Only `heartbeat` enabled and it's on schedule.
-
-**Files modified:**
-- `docs/status.md` — regenerated with 🟢 OK verdict (next run: heartbeat 20:00 UTC; Token pulse section omitted since no `articles/token-report-*.md` exists; no open issues)
-- `memory/logs/2026-06-20.md` — appended 14:39 UTC entry
-
-No notification sent (nothing needed attention).
+No notification sent (nothing needed attention; dedup of historical `last_failed` 2026-06-04 preserved).
