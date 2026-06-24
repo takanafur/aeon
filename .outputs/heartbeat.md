@@ -2,12 +2,14 @@
 
 ## Summary
 
-Ran the heartbeat skill at 15:09 UTC (14:00 slot, ~69min late — typical GHA scheduler delay).
+Ran heartbeat checks — all priority tiers green:
+- **P0:** Only `heartbeat` is enabled; `last_success` 2026-06-24T15:09Z (~5.8h ago, well inside self-check window). success_rate 99% (88/89), 0 consecutive failures.
+- **P1:** 0 open PRs.
+- **P2:** No flagged memory items.
+- **P3:** Single enabled skill firing on cadence.
 
-- **P0:** Clean. `heartbeat` last succeeded 2026-06-24T09:34:59Z (~5.6h ago), success_rate 0.99 (87/88), consecutive_failures 0.
-- **P1:** 0 open PRs. Issues disabled on this repo.
-- **P2:** Nothing flagged in `memory/MEMORY.md`.
-- **P3:** Only `heartbeat` enabled; well within its 6h cadence window.
-- **Status page:** Rewrote `docs/status.md` → 🟢 OK. Next scheduled run: heartbeat 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`). 0 open issues.
+**Files modified:**
+- `docs/status.md` — refreshed to 🟢 OK with 20:56 UTC timestamp, next run 08:00 UTC.
+- `memory/logs/2026-06-24.md` — appended 20:56 UTC heartbeat entry.
 
-Files modified: `docs/status.md`, `memory/logs/2026-06-24.md`. No notification sent (nothing needed attention).
+No notification sent (nothing needed attention).
