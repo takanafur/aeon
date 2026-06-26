@@ -1,8 +1,10 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-Heartbeat ran clean — only `heartbeat` is enabled in `aeon.yml`, its last success was ~11h ago (well inside the 36h self-check and 2x 6h schedule windows), success_rate 0.99, no consecutive failures, no open PRs, no flagged memory items, no open issues. Rewrote `docs/status.md` to 🟢 OK (Updated 2026-06-26 08:21 UTC, next run 14:00 UTC, Token pulse omitted — no report files). Logged the run to `memory/logs/2026-06-26.md`. No notification sent.
-
-Files modified:
-- `docs/status.md` — status page refresh
-- `memory/logs/2026-06-26.md` — new daily log with the heartbeat entry
+- P0: only `heartbeat` in cron-state — last_success 2026-06-26T08:21Z (~7.5h ago), success_rate 0.99 (93/94), consecutive_failures 0. No failed/stuck skills.
+- P1: 0 open PRs. Issues disabled on repo.
+- P2: nothing flagged in MEMORY.md.
+- P3: only `heartbeat` enabled; ~7.5h since last success, within the 2× 6h window (14:00 slot is firing now, ~115min late from typical GHA delay).
+- No `articles/token-report-*.md` → Token pulse section omitted.
+- Files modified: `docs/status.md` (🟢 OK, next run 20:00 UTC), `memory/logs/2026-06-26.md` (appended 15:54 UTC entry).
+- No notification sent — nothing needed attention.
