@@ -1,7 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- Ran heartbeat checks: all green. P0 clean (heartbeat `last_status: success`, 99% success rate, 0 consecutive failures, self-check within 36h). P1 no open PRs, issues disabled. P2 nothing flagged. P3 the 08:00 slot was skipped by GHA scheduler — this 14:00 run is the recovery, matches established pattern.
-- Rewrote `docs/status.md` → 🟢 OK, updated to 2026-07-01 15:59 UTC, next scheduled run heartbeat 20:00 UTC.
-- Appended log entry to `memory/logs/2026-07-01.md`.
-- No notification sent (nothing needed attention).
+- P0/P1/P2/P3 all clean: heartbeat's own state healthy (last success ~4h ago, success_rate 0.99, 0 consecutive failures), 0 open PRs, no urgent items, no missing scheduled skills (only heartbeat enabled).
+- Rewrote `docs/status.md` → 🟢 OK, updated timestamp to 2026-07-01 20:14 UTC, next scheduled run 08:00 UTC.
+- Appended 20:14 UTC entry to `memory/logs/2026-07-01.md`.
+- No notification sent — nothing needed attention.
