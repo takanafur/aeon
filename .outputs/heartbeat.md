@@ -1,4 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-All checks green. P0: only `heartbeat` in `cron-state.json` — last success 2026-06-30 08:23 UTC (~12h ago), success_rate 0.99, no consecutive failures. P1: 0 open PRs, issues disabled. P2/P3: no flagged memory items, only `heartbeat` enabled and on cadence. Rewrote `docs/status.md` → 🟢 OK (next scheduled run 08:00 UTC). Appended log entry to `memory/logs/2026-06-30.md`. No notification sent.
+- Ran heartbeat checks: all green. P0 clean (heartbeat `last_status: success`, 99% success rate, 0 consecutive failures, self-check within 36h). P1 no open PRs, issues disabled. P2 nothing flagged. P3 the 08:00 slot was skipped by GHA scheduler — this 14:00 run is the recovery, matches established pattern.
+- Rewrote `docs/status.md` → 🟢 OK, updated to 2026-07-01 15:59 UTC, next scheduled run heartbeat 20:00 UTC.
+- Appended log entry to `memory/logs/2026-07-01.md`.
+- No notification sent (nothing needed attention).
