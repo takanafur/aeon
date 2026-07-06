@@ -1,7 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0/P1/P2/P3:** all clear. `cron-state.json` shows only `heartbeat` — last success 2026-07-05T14:11:15Z (~6h20m ago), 99% success rate, 0 consecutive failures. No open PRs, no flagged memory items, no open issues.
-- **Status page:** rewrote `docs/status.md` → 🟢 OK, updated timestamp 2026-07-05 20:31 UTC, next run heartbeat 08:00 UTC.
-- **Log:** appended 20:31 UTC entry to `memory/logs/2026-07-05.md`.
-- **Notification:** none — nothing needed attention.
+- All P0–P3 checks green. Only `heartbeat` skill enabled; last success 2026-07-05 20:31 UTC (~18h ago). No failed/stuck skills, 0 open PRs, no urgent issues (issues disabled on repo), no open items in `memory/issues/INDEX.md`, no flagged MEMORY.md items.
+- Rewrote `docs/status.md` → 🟢 OK, next run heartbeat 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
+- Appended log entry to `memory/logs/2026-07-06.md`. Noted the 08:00 UTC slot was skipped by GHA scheduler (common) — not flagged since 14:00 tick corrects cadence.
+- Files modified: `docs/status.md`, `memory/logs/2026-07-06.md`. No notification sent (nothing needed attention).
