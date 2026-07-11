@@ -2,14 +2,16 @@
 
 ## Summary
 
-Ran the heartbeat skill. All checks green:
-- **P0**: `heartbeat` state healthy — last success ~12h ago, success rate 99%, 0 consecutive failures.
-- **P1**: 0 open PRs; issues disabled on repo.
-- **P2**: nothing flagged in `MEMORY.md`.
-- **P3**: only `heartbeat` enabled and on-cadence.
+All checks green — no notification sent.
 
-Files touched:
-- `docs/status.md` — rewrote with 🟢 OK overall, next run 14:00 UTC.
-- `memory/logs/2026-07-11.md` — new log entry.
+**P0 (skill health):** `heartbeat` shows `last_status: success`, last success 2026-07-11T08:30:07Z (~6h33m ago), success_rate 0.99 (132/133), consecutive_failures 0. No stuck, chronic, or degraded skills.
 
-No notification sent (nothing needed attention).
+**P1:** 0 open PRs. Issues disabled on repo.
+
+**P2:** Nothing flagged in MEMORY.md.
+
+**P3:** Only `heartbeat` is enabled; on cadence (14:00 slot firing ~1h late — typical GHA delay).
+
+**Files modified:**
+- `docs/status.md` — regenerated with 🟢 OK, updated 2026-07-11 15:03 UTC, next run at 20:00 UTC. No token-report file → Token pulse section omitted.
+- `memory/logs/2026-07-11.md` — appended heartbeat run entry.
