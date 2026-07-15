@@ -1,7 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0/P1/P2/P3 all clean: only `heartbeat` enabled, last success 2026-07-15 08:59 UTC (~5h20m ago), success_rate 99%, 0 open PRs, no flagged memory items, no open issues.
-- Rewrote `docs/status.md` → 🟢 OK, next run at 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
-- Appended 14:19 UTC heartbeat entry to `memory/logs/2026-07-15.md`.
-- No notification sent — nothing needed attention.
+- **P0:** clean — heartbeat is the only tracked skill, `last_success` 2026-07-15T14:20:06Z (~6h41m ago), success_rate 0.99, no consecutive failures, no stuck/degraded skills.
+- **P1:** 0 open PRs; issues disabled.
+- **P2:** nothing flagged in `memory/MEMORY.md`.
+- **P3:** heartbeat only; on cadence for the 20:00 UTC slot (running ~61m late, typical GHA delay).
+- **Files updated:** `docs/status.md` (🟢 OK, timestamp 21:01 UTC, next run 08:00 UTC 2026-07-16), `memory/logs/2026-07-15.md` (appended 21:01 entry).
+- **Notification:** none sent — nothing needed attention.
