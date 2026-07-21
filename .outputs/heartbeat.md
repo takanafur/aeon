@@ -1,9 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0: heartbeat state healthy — `last_success` 2026-07-20T14:55:41Z (~5h15m ago), success_rate 0.99, consecutive_failures 0. No failed/stuck/degraded skills.
-- P1: 0 open PRs; issues disabled.
-- P2: nothing flagged in MEMORY.md.
-- P3: only `heartbeat` enabled; on cadence (20:00 tick, ~10m late).
-- Rewrote `docs/status.md` → 🟢 OK; next run heartbeat 08:00 UTC. Token pulse omitted (no `articles/token-report-*.md`).
-- Appended entry to `memory/logs/2026-07-20.md`. No notification sent.
+- **P0:** heartbeat is healthy — last success 2026-07-20 20:11 UTC (~13h34m ago, within 36h window), 99% success rate, 0 consecutive failures. No other skills tracked.
+- **P1/P2/P3:** 0 open PRs, no flagged memory items, only `heartbeat` enabled and running on cadence.
+- **Status page:** rewrote `docs/status.md` → 🟢 OK. No token report file exists, so Token pulse section omitted. No open issues.
+- **Files modified:** `docs/status.md`, `memory/logs/2026-07-21.md`
+- **Notification:** none sent — nothing needed attention.
