@@ -1,17 +1,7 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-
-Ran the heartbeat check for the 14:00 UTC slot (firing ~1h late, typical GHA scheduler behavior).
-
-**Findings — all green:**
-- **P0:** Only `heartbeat` in cron-state.json — last success 5h57m ago, success rate 99% (163/164), 0 consecutive failures. Self-check well inside 36h window.
-- **P1:** No open PRs. Issues disabled on the repo, so urgent-label check is N/A.
-- **P2:** Nothing flagged in `memory/MEMORY.md`.
-- **P3:** Only `heartbeat` is enabled — on cadence.
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, next run 20:00 UTC, token-pulse section omitted since no `articles/token-report-*.md` exists).
-- `memory/logs/2026-07-22.md` — appended run log.
-
-No notification sent — nothing required attention.
+- P0/P1/P2/P3: all clear. Only `heartbeat` enabled; last success 2026-07-22T15:04:40Z (~5h46m ago), success rate 99%, 0 consecutive failures. 0 open PRs, 0 open issues, nothing flagged in MEMORY.md.
+- Rewrote `docs/status.md` → 🟢 OK, updated timestamp to 2026-07-22 20:50 UTC, next run heartbeat 08:00 UTC. No token report available → Token pulse section omitted.
+- Appended run entry to `memory/logs/2026-07-22.md`.
+- No notification sent (nothing needed attention).
