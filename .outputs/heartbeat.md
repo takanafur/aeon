@@ -1,11 +1,6 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0:** heartbeat is the only tracked skill — last success 2026-07-26T20:42:09Z (~12h ago), 99% success rate (177/178), 0 consecutive failures. Well inside the 36h self-check window.
-- **P1:** 0 open PRs. Issues disabled on this repo.
-- **P2:** nothing flagged in `memory/MEMORY.md`.
-- **P3:** only `heartbeat` enabled, on cadence.
-- Rewrote `docs/status.md` → 🟢 OK; next scheduled run: heartbeat 14:00 UTC. No token-report articles present → Token pulse section omitted. No open issues.
-- Logged the run to `memory/logs/2026-07-27.md`. No notification sent (nothing needed attention).
-
-Files modified: `docs/status.md`, `memory/logs/2026-07-27.md`.
+- **P0/P1/P2/P3:** all green. Only `heartbeat` enabled; last success 2026-07-27 08:48 UTC (~6h22m ago), success_rate 99% (178/179), consecutive_failures 0. No open PRs, no urgent issues, no flagged memory items.
+- **Files modified:** `docs/status.md` (regenerated → 🟢 OK, next run 20:00 UTC), `memory/logs/2026-07-27.md` (appended run entry).
+- **No notification sent** — nothing needed attention.
