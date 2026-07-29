@@ -1,8 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
+All checks green: heartbeat last succeeded 6h09m ago (183/184 = 99% success rate, 0 consecutive failures), 0 open PRs, no flagged memory items, no open issues, only heartbeat enabled and on cadence. Rewrote `docs/status.md` (🟢 OK, next run 20:00 UTC) and logged this run to `memory/logs/2026-07-29.md`. No notification sent — nothing needed attention.
+
 ## Summary
-- **P0/P1/P2/P3:** all clear. Only `heartbeat` is enabled; `last_success: 2026-07-28T20:50:21Z` (~12h29m ago, inside 36h self-check window); success_rate 0.99, consecutive_failures 0. 0 open PRs, no urgent issues, no memory follow-ups.
-- **Status page:** rewrote `docs/status.md` → 🟢 OK, next run heartbeat 14:00 UTC. No `articles/token-report-*.md` → Token pulse omitted. INDEX.md has no open rows.
-- **Notification:** none sent (nothing needed attention).
-- **Log:** appended entry to `memory/logs/2026-07-29.md`.
-- **Files modified:** `docs/status.md`, `memory/logs/2026-07-29.md`.
+- Verified P0–P3 checks: all green.
+- Files modified: `docs/status.md`, `memory/logs/2026-07-29.md`.
+- Follow-up: none.
