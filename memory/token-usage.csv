@@ -190,3 +190,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-31,heartbeat,claude-opus-4-7,12,3390,362418,32113
 2026-07-31,heartbeat,claude-opus-4-7,16,3290,533721,30868
 2026-08-01,heartbeat,claude-opus-4-7,16,3119,534014,31098
+2026-08-01,heartbeat,claude-opus-4-7,20,3929,747097,31967
