@@ -1,7 +1,11 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- All P0-P3 checks clean: heartbeat succeeded 6h15m ago (well within 36h self-check window), 0 open PRs, no flagged memory items, only heartbeat is enabled and on cadence.
-- Regenerated `docs/status.md` → 🟢 OK, timestamp 21:16 UTC, next run 08:00 UTC.
-- Appended run entry to `memory/logs/2026-07-31.md`.
-- No notification sent (nothing needed attention).
+
+- **P0:** heartbeat last succeeded 2026-07-31T21:17:23Z (~12h10m ago, well inside 36h self-check window); success_rate 0.99 (190/191), consecutive_failures 0. No failed/stuck skills.
+- **P1:** 0 open PRs; issues disabled on this repo.
+- **P2:** nothing flagged in MEMORY.md.
+- **P3:** only `heartbeat` enabled — on cadence (within the 24h = 2× max interval window).
+- **Status page:** rewrote `docs/status.md` → 🟢 OK, next run heartbeat at 14:00 UTC.
+- **Files modified:** `docs/status.md`, `memory/logs/2026-08-01.md` (new).
+- **Notification:** not sent (nothing needed attention).
