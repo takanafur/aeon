@@ -1,7 +1,9 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+`HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- Ran heartbeat P0–P3 checks: all green. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, `heartbeat` (only enabled skill) on cadence with 99% success rate.
-- Rewrote `docs/status.md` → 🟢 OK, timestamp 2026-08-02 20:48 UTC, next run heartbeat 08:00 UTC.
-- Appended run entry to `memory/logs/2026-08-02.md`.
-- No notification sent — nothing needed attention.
+- Ran heartbeat checks — no P0/P1/P2/P3 flags. Only `heartbeat` is enabled; last success 2026-08-02T20:48:38Z (~11h41m ago), success rate 99%, 0 consecutive failures.
+- Rewrote `docs/status.md` → 🟢 OK, updated timestamp to 08:29 UTC, next scheduled run at 14:00 UTC.
+- Logged findings to `memory/logs/2026-08-03.md`.
+- No notification sent (nothing needed attention).
+
+Files modified: `docs/status.md`, `memory/logs/2026-08-03.md`.
