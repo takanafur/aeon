@@ -1,9 +1,11 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- Ran heartbeat checks — no P0/P1/P2/P3 flags. Only `heartbeat` is enabled; last success 2026-08-02T20:48:38Z (~11h41m ago), success rate 99%, 0 consecutive failures.
-- Rewrote `docs/status.md` → 🟢 OK, updated timestamp to 08:29 UTC, next scheduled run at 14:00 UTC.
-- Logged findings to `memory/logs/2026-08-03.md`.
-- No notification sent (nothing needed attention).
-
-Files modified: `docs/status.md`, `memory/logs/2026-08-03.md`.
+Heartbeat ran cleanly at 15:11 UTC (14:00 slot, ~71m late).
+- **P0**: Only `heartbeat` in `cron-state.json` — last success 2026-08-03 08:30 UTC (~6h41m ago), success_rate 0.99, consecutive_failures 0. Green.
+- **P1**: 0 open PRs, issues disabled — no action.
+- **P2**: Nothing flagged in `MEMORY.md`.
+- **P3**: Only `heartbeat` enabled and on cadence.
+- **Status page**: Rewrote `docs/status.md` → 🟢 OK. Next run: heartbeat 20:00 UTC. Token pulse section omitted (no article + no tracked token).
+- **Notification**: Skipped — nothing needed attention.
+- **Files modified**: `docs/status.md`, `memory/logs/2026-08-03.md`.
