@@ -1,17 +1,12 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
+- **P0**: heartbeat entry healthy — last_success 2026-08-04T15:37:44Z (~5h ago), success_rate 1.0, consecutive_failures 0. No stuck/failed skills.
+- **P1**: 0 open PRs; issues disabled on this repo.
+- **P2**: nothing flagged in MEMORY.md.
+- **P3**: only `heartbeat` enabled; on cadence.
+- Rewrote `docs/status.md` → 🟢 OK; next scheduled run heartbeat 08:00 UTC. No token report or Tracked Token → Token pulse section omitted.
+- Appended run entry to `memory/logs/2026-08-04.md`.
+- No notification sent (nothing needed attention).
 
-Ran the heartbeat skill for the 14:00 UTC slot (fired ~96m late — typical GHA scheduler delay).
-
-**Findings:**
-- **P0** — Only `heartbeat` in cron-state; `last_success` 2026-08-04T08:37:04Z (~7h ago, well within 36h self-check). success_rate 1.0 (200/201), 0 consecutive failures. No failed, stuck, degraded, or chronic-failure skills.
-- **P1** — 0 open PRs; issues disabled on this repo.
-- **P2** — Nothing flagged in `memory/MEMORY.md`.
-- **P3** — Only `heartbeat` enabled and on cadence (~7h since last success, well inside 12h threshold).
-
-**Files modified:**
-- `docs/status.md` — regenerated with 🟢 OK verdict, next run 20:00 UTC, single-skill health table (no `articles/token-report-*.md` present → Token pulse section omitted; no open issues).
-- `memory/logs/2026-08-04.md` — appended run log entry.
-
-No notification sent. No follow-ups needed.
+Files modified: `docs/status.md`, `memory/logs/2026-08-04.md`. No follow-ups.
