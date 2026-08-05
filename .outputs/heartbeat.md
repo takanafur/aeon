@@ -1,10 +1,6 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-All checks green — no failures, no stuck skills, no open PRs, no flagged memory items. Only `heartbeat` is enabled and it's on cadence (last success ~12h31m ago, within the 24h window for the 20:00→08:00 slot).
-
-**Files modified:**
-- `docs/status.md` — regenerated with 🟢 OK verdict, timestamp 2026-08-05 09:11 UTC, next run heartbeat 14:00 UTC.
-- `memory/logs/2026-08-05.md` — created with today's heartbeat log entry.
-
-**No notification sent** (nothing needed attention).
+- P0/P1/P2/P3 all green: only `heartbeat` is enabled; last success 6h22m ago (well within 12h cadence and 36h self-check), success_rate 1.0, no consecutive failures, no open PRs, no urgent issues, no memory flags.
+- Rewrote `docs/status.md` → Overall 🟢 OK, Updated 2026-08-05 15:34 UTC, Next run 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`). Open issues: none.
+- Appended log entry to `memory/logs/2026-08-05.md`. No notification sent — nothing needed attention.
