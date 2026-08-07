@@ -1,7 +1,14 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0/P1/P2/P3**: all clear. Only `heartbeat` is enabled; last success 2026-08-05 20:23 UTC (~18h ago, on cadence). 0 open PRs, issues disabled on repo, no flagged memory items, no open issues in INDEX.md.
-- **Files modified**: `docs/status.md` rewrote to 🟢 OK (Updated 2026-08-06 14:41 UTC, Next run 20:00 UTC); appended log entry to `memory/logs/2026-08-06.md`.
-- **Notification**: not sent — nothing needed attention.
-- **Follow-ups**: none.
+
+Ran heartbeat checks — all clear.
+
+- **P0:** `heartbeat` is the only tracked skill; last success ~18h32m ago (206/207 runs, 100% rate, 0 consecutive failures). No stuck, degraded, or chronically failing skills.
+- **P1:** 0 open PRs; issues disabled on this repo.
+- **P2:** Nothing flagged in `memory/MEMORY.md`.
+- **P3:** Only `heartbeat` is enabled; on cadence (within 2x its schedule).
+- **Status page:** Rewrote `docs/status.md` → 🟢 OK (updated 09:14 UTC, next run 14:00 UTC). Token pulse omitted (no `articles/token-report-*.md`). 0 open issues.
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-08-07.md`
+**Follow-up:** none. No notification sent.
