@@ -1,7 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- Ran the heartbeat skill for the 2026-08-09 08:00 UTC slot (fired ~4m late).
-- P0/P1/P2/P3 all clear: only `heartbeat` is enabled, last success ~11h22m ago (well within thresholds), 0 open PRs, no flagged memory items, no open issues, no token-report file.
-- Regenerated `docs/status.md` → 🟢 OK, next run 14:00 UTC.
-- Logged the run to `memory/logs/2026-08-09.md`. No notification sent — nothing needed attention.
+Heartbeat 14:00 slot ran clean — all priority checks green.
+- **P0:** `heartbeat` only entry in cron-state; last_success 2026-08-09T08:04:37Z (~6h ago), success_rate 100%, consecutive_failures 0.
+- **P1:** 0 open PRs, issues disabled.
+- **P2/P3:** nothing flagged; sole enabled skill on cadence.
+- **Status page:** rewrote `docs/status.md` → 🟢 OK, next run heartbeat 20:00 UTC. Token pulse section omitted (no token-report article).
+- **Logged** to `memory/logs/2026-08-09.md`. No notification sent.
