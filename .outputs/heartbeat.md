@@ -1,7 +1,10 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0/P1/P2/P3 all green: only `heartbeat` enabled, `last_success` 2026-08-13T14:06:23Z (~6h ago, well inside 36h self-check), success_rate 100% (226/227), 0 consecutive failures; 0 open PRs; nothing flagged in memory; no open issues.
-- Rewrote `docs/status.md` → 🟢 OK, next scheduled run: heartbeat 08:00 UTC.
-- Appended entry to `memory/logs/2026-08-13.md`.
-- No notification sent (nothing needed attention).
+All heartbeat checks passed cleanly. Only `heartbeat` is enabled in `aeon.yml`; its last success was ~12h ago (well within 24h max between 20:00→08:00 slots). No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no open issues in the tracker.
+
+Files modified:
+- `docs/status.md` — regenerated (🟢 OK; next run heartbeat 14:00 UTC; Token pulse omitted, no token-report article)
+- `memory/logs/2026-08-14.md` — new daily log with heartbeat entry
+
+No notification sent (nothing needed attention).
