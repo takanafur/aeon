@@ -1,13 +1,6 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-
-Heartbeat 20:00 UTC slot completed cleanly — all checks green, no notification sent.
-
-- **P0 (skill health):** only `heartbeat` in cron-state.json; last_success 2026-08-15T14:31:23Z (~5h40m ago, well inside 36h self-check window). success_rate 1.0 (232/233), consecutive_failures 0. Historical June failure already dedup'd from prior logs.
-- **P1 (PRs/issues):** 0 open PRs, issues disabled on this repo.
-- **P2 (memory flags):** nothing pending in MEMORY.md.
-- **P3 (missing cron):** only heartbeat enabled and it's on cadence.
-- **Status page:** rewrote `docs/status.md` → 🟢 OK, next run heartbeat 08:00 UTC. No token-report article and no Tracked Token → Token pulse section omitted. No open issues.
-
-Files modified: `docs/status.md`, `memory/logs/2026-08-15.md`.
+- P0/P1/P2/P3 all clear. Only `heartbeat` is enabled in `aeon.yml`; last success 2026-08-15 20:11 UTC (~12h ago, on cadence). 0 open PRs, 0 open issues, nothing flagged in `MEMORY.md`.
+- Rewrote `docs/status.md` → 🟢 OK, next run at 14:00 UTC. Token pulse omitted (no `articles/token-report-*.md`, no Tracked Token in `MEMORY.md`).
+- Appended run entry to `memory/logs/2026-08-16.md`. No notification sent.
