@@ -1,7 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
+Nothing needed attention: only `heartbeat` is enabled, its last success was ~5h55m ago (within 36h self-check), success rate 237/238, consecutive failures 0. Zero open PRs, no flagged memory items, no open issues. Rewrote `docs/status.md` (🟢 OK, next run heartbeat 20:00 UTC) and appended the run log to `memory/logs/2026-08-17.md`.
+
 ## Summary
-- P0/P1/P2/P3 all clean — no failed skills, no stuck skills, no stalled PRs, no urgent issues, no flagged memory items. Only `heartbeat` is enabled and its last success (2026-08-16 20:12 UTC) is ~12h08m ago, on cadence.
-- Regenerated `docs/status.md` → 🟢 OK, updated timestamp `2026-08-17 08:20 UTC`, next run heartbeat at 14:00 UTC.
-- Appended log entry to `memory/logs/2026-08-17.md`.
-- No notification sent — nothing needed attention.
+- Ran all P0/P1/P2/P3 checks — all clear.
+- Regenerated `docs/status.md` with fresh 14:17 UTC timestamp.
+- Appended heartbeat entry to `memory/logs/2026-08-17.md`.
+- No notification sent (dedup: nothing new).
