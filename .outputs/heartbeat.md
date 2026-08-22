@@ -1,10 +1,10 @@
 `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- **P0**: cron-state.json shows only `heartbeat` — last success 2026-08-22 08:13 UTC (~6h ago, well inside 36h self-check). success_rate 1.0 (252/253), 0 consecutive failures. Historical June failure already dedup'd.
+- **P0** (failed/stuck): none. Only `heartbeat` in cron-state; `last_success` 2026-08-22 14:12 UTC (~6h19m ago, well inside 36h self-check). success_rate 1.0 (253/254), no consecutive failures.
 - **P1**: 0 open PRs; issues disabled on repo.
-- **P2**: nothing flagged in MEMORY.md.
+- **P2**: nothing flagged in `memory/MEMORY.md`.
 - **P3**: only `heartbeat` enabled; on cadence.
-- **Status page**: rewrote `docs/status.md` → 🟢 OK. Next run: heartbeat 20:00 UTC. No token-report articles → Token pulse section omitted.
-- **Files modified**: `docs/status.md`, `memory/logs/2026-08-22.md`.
+- **Status page**: rewrote `docs/status.md` → 🟢 OK; next run heartbeat 08:00 UTC. No token-report file → Token pulse section omitted. No open issues.
 - **Notification**: none sent — nothing needed attention.
+- **Files modified**: `docs/status.md`, `memory/logs/2026-08-22.md`.
