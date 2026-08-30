@@ -1,0 +1,180 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "metrics-stack",
+        "sep-2",
+        "slots-stack",
+        "sep-3",
+        "system-note"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "Heartbeat gap detected",
+        "message": "Last success 2026-08-27 20:48 UTC (~66h ago)",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-missed",
+        "stat-gap"
+      ]
+    },
+    "stat-missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Missed scheduled slots",
+        "value": "5"
+      }
+    },
+    "stat-gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Time since last success",
+        "value": "~66h"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "slots-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "slots-title",
+        "slots-grid"
+      ]
+    },
+    "slots-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed slot windows",
+        "level": "h4"
+      }
+    },
+    "slots-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "slot-1",
+        "slot-2",
+        "slot-3",
+        "slot-4",
+        "slot-5",
+        "slot-6"
+      ]
+    },
+    "slot-1": {
+      "type": "Badge",
+      "props": {
+        "text": "28th 08:00",
+        "variant": "destructive"
+      }
+    },
+    "slot-2": {
+      "type": "Badge",
+      "props": {
+        "text": "28th 20:00",
+        "variant": "destructive"
+      }
+    },
+    "slot-3": {
+      "type": "Badge",
+      "props": {
+        "text": "29th 08:00",
+        "variant": "destructive"
+      }
+    },
+    "slot-4": {
+      "type": "Badge",
+      "props": {
+        "text": "29th 14:00",
+        "variant": "destructive"
+      }
+    },
+    "slot-5": {
+      "type": "Badge",
+      "props": {
+        "text": "29th 20:00",
+        "variant": "destructive"
+      }
+    },
+    "slot-6": {
+      "type": "Badge",
+      "props": {
+        "text": "30th 08:00",
+        "variant": "destructive"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "system-note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note-label",
+        "note-current",
+        "note-issue"
+      ]
+    },
+    "note-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery & diagnostics",
+        "level": "h4"
+      }
+    },
+    "note-current": {
+      "type": "Text",
+      "props": {
+        "text": "Current slot fired ~1h late as recovery",
+        "variant": "body"
+      }
+    },
+    "note-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Scheduler tick landing outside slot windows again",
+        "variant": "muted"
+      }
+    }
+  }
+}
