@@ -2,16 +2,14 @@
 
 ## Summary
 
-Ran the heartbeat skill for the 14:00 UTC slot (firing ~1h9m late, consistent scheduler drift).
+Ran heartbeat checks — all clean:
+- **P0:** heartbeat state fresh (success 6h14m ago, success_rate 1.0, no stuck/failed/degraded).
+- **P1:** 0 open PRs, issues disabled.
+- **P2:** nothing flagged in MEMORY.md.
+- **P3:** only heartbeat enabled; its state is fresh.
 
-**Checks**
-- **P0** clean: heartbeat `last_success` 2026-09-02T21:23:06Z (~17.8h ago, well inside 36h self-check window); success_rate 1.0 (275/276); no stuck/failed/degraded skills.
-- **P1** clean: 0 open PRs; GitHub issues disabled.
-- **P2** clean: nothing flagged in `memory/MEMORY.md`.
-- **P3** clean: only `heartbeat` enabled in `aeon.yml`; its own state is fresh.
+**Files touched:**
+- `docs/status.md` — regenerated → 🟢 OK, Updated 2026-09-03 21:23 UTC, next run 08:00 UTC (2026-09-04). No token-report article → Token pulse section omitted.
+- `memory/logs/2026-09-03.md` — appended 21:23 UTC heartbeat entry.
 
-**Files touched**
-- `docs/status.md` — rewrote to 🟢 OK, next scheduled run heartbeat 20:00 UTC (2026-09-03). No token-report article + no Tracked Token → Token pulse section omitted. No open issues.
-- `memory/logs/2026-09-03.md` — created with run log entry.
-
-No notification sent (nothing needs attention; no prior attention items to re-flag).
+No notification sent (nothing needs attention; today's 15:09 run was also clean).
