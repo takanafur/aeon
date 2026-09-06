@@ -1,0 +1,163 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Degradation Alert",
+        "description": "System health monitoring failure"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "stack_metrics",
+        "sep2",
+        "stack_error",
+        "sep3",
+        "stack_status"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 Heartbeat Degraded",
+        "message": "15 consecutive failures since 2026-09-03T21:23Z (~60h stale, exceeding >36h self-check threshold)",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_failures",
+        "stat_staleness",
+        "stat_threshold"
+      ]
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "15"
+      }
+    },
+    "stat_staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "System Staleness",
+        "value": "~60h"
+      }
+    },
+    "stat_threshold": {
+      "type": "Stat",
+      "props": {
+        "label": "Self-Check Threshold",
+        "value": ">36h"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_error": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_error",
+        "text_error_sig",
+        "text_error_code",
+        "text_error_cause"
+      ]
+    },
+    "heading_error": {
+      "type": "Heading",
+      "props": {
+        "text": "Error Details",
+        "level": "h3"
+      }
+    },
+    "text_error_sig": {
+      "type": "Text",
+      "props": {
+        "text": "Error signature: Truncated Claude Code result JSON",
+        "variant": "body"
+      }
+    },
+    "text_error_code": {
+      "type": "Text",
+      "props": {
+        "text": "Error response: is_error:true, num_turns:1",
+        "variant": "caption"
+      }
+    },
+    "text_error_cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: Process errored before completing first turn",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_scope",
+        "text_fleet",
+        "text_issue",
+        "text_status"
+      ]
+    },
+    "text_scope": {
+      "type": "Text",
+      "props": {
+        "text": "Scope: Only skill enabled",
+        "variant": "muted"
+      }
+    },
+    "text_fleet": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet status: Dark",
+        "variant": "muted"
+      }
+    },
+    "text_issue": {
+      "type": "Text",
+      "props": {
+        "text": "Issue filed: ISS-001",
+        "variant": "body"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Status page: 🔴 DEGRADED",
+        "variant": "lead"
+      }
+    }
+  }
+}
