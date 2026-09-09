@@ -1,8 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-- P0-P3 all clean. Heartbeat is healthy (`last_success` 10.8h ago, `consecutive_failures: 0`, success rate 95%). No PRs, no urgent issues, no memory flags, no lagging skills.
-- Overall status: 🟡 WATCH — driven solely by pre-existing open issue ISS-001 (high). Acute failure streak resolved two days ago, but root cause was never diagnosed.
-- No notification sent — ISS-001 was notified 2026-09-06; no new development.
-- Files modified: `docs/status.md`, `memory/logs/2026-09-08.md`.
-- Follow-up: ISS-001 still needs root-cause diagnosis and a fix to the state writer's ~200-char `last_error` truncation.
+- Ran heartbeat checks (P0-P3 all clean) — heartbeat's cron-state entry is healthy (`success_rate: 0.95`, `consecutive_failures: 0`, last success 18.6h ago).
+- Only `heartbeat` is enabled in `aeon.yml`; no PRs, no urgent issues, no P2/P3 flags.
+- `ISS-001` (high) remains open but was already notified 2026-09-06 (~78h ago) with no new development — no notification per "never notify twice" rule.
+- Files modified: `docs/status.md` (regenerated → 🟡 WATCH, driven solely by ISS-001), `memory/logs/2026-09-09.md`.
+- Follow-up: `ISS-001` still needs root-cause diagnosis and a fix to the state writer's error truncation.
