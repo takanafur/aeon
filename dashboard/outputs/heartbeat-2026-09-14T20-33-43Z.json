@@ -1,0 +1,122 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "metrics_container",
+        "sep2",
+        "issue_container"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "P3: heartbeat degradation",
+        "message": "Crossed 24h threshold (2× 12h max scheduled interval). Status: recovering at 20:00 UTC.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_last_success",
+        "stat_elapsed",
+        "text_missed_slots"
+      ]
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last success",
+        "value": "2026-09-13 14:43 UTC"
+      }
+    },
+    "stat_elapsed": {
+      "type": "Stat",
+      "props": {
+        "label": "Time elapsed",
+        "value": "~29h50m ago"
+      }
+    },
+    "text_missed_slots": {
+      "type": "Text",
+      "props": {
+        "text": "Missed slots: 20:00 yesterday, 08:00 and 14:00 today"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_issue_intro",
+        "issue_badges"
+      ]
+    },
+    "text_issue_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Underlying pattern tracked under:",
+        "variant": "lead"
+      }
+    },
+    "issue_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_issue_id",
+        "badge_severity",
+        "text_diagnosed_date"
+      ]
+    },
+    "badge_issue_id": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001",
+        "variant": "outline"
+      }
+    },
+    "badge_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "secondary"
+      }
+    },
+    "text_diagnosed_date": {
+      "type": "Text",
+      "props": {
+        "text": "undiagnosed since 2026-09-06",
+        "variant": "caption"
+      }
+    }
+  }
+}
