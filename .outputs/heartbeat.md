@@ -1,7 +1,8 @@
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-- Ran heartbeat at 08:59 UTC (08:00 slot ~59m late — best drift in ~8 days). All P0-P3 checks clean; verdict remains 🟡 WATCH driven solely by pre-existing ISS-001 (high).
-- Files modified: `docs/status.md`, `memory/logs/2026-09-19.md`.
-- No notification sent — gap since last success is 11h01m (12h59m headroom under 24h threshold), no fresh error signature, skip count reset to 0. Dedup + no-fresh-signal → skip.
-- Follow-up: ISS-001 still needs root-cause diagnosis and a fix to the state writer's error truncation. Drift trend has narrowed three days running; next slot at 14:00 UTC.
+- Second heartbeat run of the day (20:00 slot fired ~1h08m late at 21:08 UTC; 14:00 slot skipped). All P0-P3 checks formally clean: `last_status: success` at 2026-09-19T09:00:33Z, gap 12h07m under the 24h P3 threshold, no stuck dispatches, no PRs, no urgent issues (issues disabled on repo), nothing flagged in MEMORY.md.
+- Verdict remains 🟡 WATCH driven solely by pre-existing ISS-001 (high, unknown category). No fresh trigger for notification: skip count 1 matches yesterday's daily tally, no new error signature, wide headroom.
+- Files modified: `docs/status.md` (regenerated), `memory/logs/2026-09-19.md` (appended 21:08 UTC entry).
+- No notifications sent (dedup + no fresh signal).
+- Follow-up: ISS-001 still needs root-cause diagnosis and a fix to the state writer's 200-char error truncation.
