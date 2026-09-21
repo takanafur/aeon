@@ -1,0 +1,156 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat P3"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "stack_metrics",
+        "sep2",
+        "stack_issues",
+        "sep3",
+        "stack_selfcheck"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Threshold Crossed",
+        "message": "Last success 2026-09-20 14:50Z — gap ~29h48m has exceeded 24h threshold. Status page: WATCH",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_lastsuccess",
+        "stat_gap",
+        "stat_headroom",
+        "badge_status"
+      ]
+    },
+    "stat_lastsuccess": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "2026-09-20 14:50Z"
+      }
+    },
+    "stat_gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Gap",
+        "value": "~29h48m",
+        "trend": "up",
+        "delta": "+5h48m over threshold"
+      }
+    },
+    "stat_headroom": {
+      "type": "Stat",
+      "props": {
+        "label": "Headroom to 36h",
+        "value": "~6h"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_skipped",
+        "text_skipped",
+        "heading_statewriter",
+        "text_statewriter"
+      ]
+    },
+    "heading_skipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Skipped Slots",
+        "level": "h3"
+      }
+    },
+    "text_skipped": {
+      "type": "Text",
+      "props": {
+        "text": "3 slots skipped in a row: 2026-09-20 20:00, 2026-09-21 08:00, 2026-09-21 14:00. Worst skip streak since ISS-001 opened.",
+        "variant": "body"
+      }
+    },
+    "heading_statewriter": {
+      "type": "Heading",
+      "props": {
+        "text": "Known Issues",
+        "level": "h3"
+      }
+    },
+    "text_statewriter": {
+      "type": "Text",
+      "props": {
+        "text": "State writer still truncates leading error.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_selfcheck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_selfcheck",
+        "text_selfcheck"
+      ]
+    },
+    "heading_selfcheck": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-Check Status",
+        "level": "h3"
+      }
+    },
+    "text_selfcheck": {
+      "type": "Text",
+      "props": {
+        "text": "Still inside 36h window with ~6h headroom remaining.",
+        "variant": "muted"
+      }
+    }
+  }
+}
