@@ -1,0 +1,128 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "metrics",
+        "sep2",
+        "issue"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "P3 Alert — 20:28 UTC",
+        "message": "Gap since last success is 24h07m (over 24h threshold). Tightrope forecast in yesterday's log finally tipped."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gap_stat",
+        "lateness_stat",
+        "skipped_text"
+      ]
+    },
+    "gap_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Gap since last success",
+        "value": "24h07m",
+        "trend": "up"
+      }
+    },
+    "lateness_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "This run lateness",
+        "value": "28m"
+      }
+    },
+    "skipped_text": {
+      "type": "Text",
+      "props": {
+        "text": "Skipped slots today: 08:00 and 14:00"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue_detail",
+        "blocker_alert"
+      ]
+    },
+    "issue_detail": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_title",
+        "issue_badges"
+      ]
+    },
+    "issue_title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-001: heartbeat pre-first-turn failures"
+      }
+    },
+    "issue_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_open",
+        "badge_high"
+      ]
+    },
+    "badge_open": {
+      "type": "Badge",
+      "props": {
+        "text": "open",
+        "variant": "destructive"
+      }
+    },
+    "badge_high": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "secondary"
+      }
+    },
+    "blocker_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "State writer error truncation blocks root-cause diagnosis"
+      }
+    }
+  }
+}
