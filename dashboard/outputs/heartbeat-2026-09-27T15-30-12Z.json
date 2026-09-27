@@ -1,0 +1,191 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Aeon health status"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "stats_section",
+        "sep2",
+        "details_section",
+        "sep3",
+        "issue_section"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 Aeon DEGRADED",
+        "message": "Heartbeat gap 42h48m (last success 2026-09-25 20:41 UTC; P0 self-check fires at >36h)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_gap",
+        "stat_last_success"
+      ]
+    },
+    "stat_gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat Gap",
+        "value": "42h48m",
+        "delta": "+6h48m over threshold (36h)",
+        "trend": "down"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "2026-09-25 20:41 UTC"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details_title",
+        "details_list"
+      ]
+    },
+    "details_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Details",
+        "level": "h3"
+      }
+    },
+    "details_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "detail_1",
+        "detail_2",
+        "detail_3"
+      ]
+    },
+    "detail_1": {
+      "type": "Text",
+      "props": {
+        "text": "Full day 2026-09-26 skipped — all three slots missed, no log written"
+      }
+    },
+    "detail_2": {
+      "type": "Text",
+      "props": {
+        "text": "P3 firing for 4th day"
+      }
+    },
+    "detail_3": {
+      "type": "Text",
+      "props": {
+        "text": "Status page → 🔴 DEGRADED"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue_title",
+        "issue_content"
+      ]
+    },
+    "issue_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking Issue",
+        "level": "h3"
+      }
+    },
+    "issue_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_header",
+        "issue_description"
+      ]
+    },
+    "issue_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_id_badge",
+        "severity_badge",
+        "open_date_text"
+      ]
+    },
+    "issue_id_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001",
+        "variant": "destructive"
+      }
+    },
+    "severity_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "severity: high",
+        "variant": "destructive"
+      }
+    },
+    "open_date_text": {
+      "type": "Text",
+      "props": {
+        "text": "open since 2026-09-06",
+        "variant": "muted"
+      }
+    },
+    "issue_description": {
+      "type": "Text",
+      "props": {
+        "text": "State writer's ~200-char last_error truncation cap is dropping the leading error message"
+      }
+    }
+  }
+}
