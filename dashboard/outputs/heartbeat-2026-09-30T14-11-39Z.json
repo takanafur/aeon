@@ -1,0 +1,164 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "stat_gap",
+        "text_p3",
+        "sep2",
+        "heading_timeline",
+        "table_timeline",
+        "sep3",
+        "heading_issue",
+        "stack_issue",
+        "sep4",
+        "text_status"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat gap 41h24m exceeds 36h P0 threshold"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stat_gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat Gap",
+        "value": "41h24m",
+        "delta": "36h P0 threshold exceeded",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "text_p3": {
+      "type": "Text",
+      "props": {
+        "text": "P3 firing at ~1.72× 24h threshold",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Recent Activity",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "table_timeline": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Date",
+          "Time",
+          "Event",
+          "Status"
+        ],
+        "rows": [
+          [
+            "2026-09-29",
+            "all slots",
+            "zero-run day",
+            "all slots skipped"
+          ],
+          [
+            "2026-09-30",
+            "08:00",
+            "slot check",
+            "skipped"
+          ],
+          [
+            "2026-09-30",
+            "14:00",
+            "run fired",
+            "~10m late"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking Issue",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_iss001",
+        "text_iss001_details"
+      ]
+    },
+    "badge_iss001": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001 (high severity)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "text_iss001_details": {
+      "type": "Text",
+      "props": {
+        "text": "state-writer error truncation still blocks 09-06 streak triage and 09-29 skips investigation",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Status page: 🔴 DEGRADED",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}
