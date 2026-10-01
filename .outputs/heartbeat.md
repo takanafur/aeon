@@ -1,7 +1,7 @@
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
-- All P0 checks clear this cycle: gap since last success is 18h46m (well under the 36h self-check threshold); no stuck dispatches; `consecutive_failures: 0`; `success_rate: 0.95`. P3 also subthreshold (18h46m < 24h). P1 empty (no PRs; issues disabled). ISS-001 (high) remains open → verdict pins to 🟡 WATCH.
-- No notification sent — 09-30's grouped alert sits ~18h49m back, inside the 48h dedup window, and the only signals that changed are *clearing*, not firing (P0 and P3 both relaxed from yesterday's 🔴 DEGRADED).
-- Files modified: `docs/status.md` (🔴 DEGRADED → 🟡 WATCH; Updated 2026-10-01 08:59 UTC; Next scheduled run heartbeat 14:00 UTC), `memory/logs/2026-10-01.md` (new).
-- Follow-up: ISS-001 remains the single unblocking action — the state writer's `last_error` truncation still cuts the useful leading error. The schedule continues to show "one skipped slot + one late fire per day" shape (yesterday's 20:00 skipped, today's 08:00 fired ~59m late); if the pattern worsens, the 48h dedup window on 09-30's alert closes ~2026-10-02 14:10 UTC and any new P0/P3 flag will notify.
+- Second heartbeat run of 2026-10-01 (20:00 slot fired ~1h08m late; the 14:00 slot was skipped). All P0 checks clean: gap since last success is 12h08m against the 36h self-check threshold, `consecutive_failures: 0`, `success_rate: 0.95`, no stuck dispatches. P1 (no PRs, issues disabled), P2 (MEMORY.md clean), and P3 (12h08m < 24h) all pass. Only ISS-001 (high) remains open, so the status page lands at 🟡 WATCH.
+- Files modified: `docs/status.md` (rewritten with 21:08 UTC timestamp, next run 08:00 UTC, last-run row refreshed to 2026-10-01 09:00 UTC), `memory/logs/2026-10-01.md` (appended the 21:08 UTC entry and rewrote the daily summary).
+- No notification sent — same reasons as the 08:59 run: no fresh signal and still inside the 48h dedup window from the 09-30 ~14:10 UTC grouped alert (expires ~2026-10-02 14:10 UTC).
+- Follow-up: schedule drift now repeats within a single day (14:00 skip + 20:00 late), but is non-threatening at current slack. If tomorrow's 08:00 slot skips, the gap to 10-02 14:00 would be ~29h and cross both the P3 line and the dedup-window expiry — set up to become a fresh notify-worthy signal.
