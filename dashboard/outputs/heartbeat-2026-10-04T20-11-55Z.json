@@ -1,0 +1,292 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Heartbeat monitoring status and degradation analysis"
+      },
+      "children": [
+        "alert",
+        "separator1",
+        "metrics_section",
+        "separator2",
+        "timeline_section",
+        "separator3",
+        "blocking_section"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat gap 71 hours (last success 2026-10-01 21:10 UTC → now 2026-10-04 20:11 UTC)",
+        "type": "error"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "metrics_grid"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Alert Thresholds",
+        "level": "h3"
+      }
+    },
+    "metrics_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "p0_stat",
+        "p3_stat",
+        "gap_stat"
+      ]
+    },
+    "p0_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Threshold (36h)",
+        "value": "2.0×",
+        "trend": "up",
+        "delta": "Triggered"
+      }
+    },
+    "p3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "P3 Threshold (24h)",
+        "value": "2.96×",
+        "trend": "up",
+        "delta": "Triggered"
+      }
+    },
+    "gap_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Gap",
+        "value": "71h"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timeline_heading",
+        "last_success",
+        "zero_run_days",
+        "schedule_drift"
+      ]
+    },
+    "timeline_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline & Execution Gaps",
+        "level": "h3"
+      }
+    },
+    "last_success": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "last_success_label",
+        "last_success_text"
+      ]
+    },
+    "last_success_label": {
+      "type": "Text",
+      "props": {
+        "text": "Last successful run:",
+        "variant": "lead"
+      }
+    },
+    "last_success_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-01 21:10 UTC",
+        "variant": "body"
+      }
+    },
+    "zero_run_days": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "zero_run_label",
+        "zero_run_text"
+      ]
+    },
+    "zero_run_label": {
+      "type": "Text",
+      "props": {
+        "text": "Zero-run days:",
+        "variant": "lead"
+      }
+    },
+    "zero_run_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-02 (entirely skipped), 2026-10-03 (entirely skipped), 2026-10-04 (08:00 and 14:00 slots skipped). Current 20:00 fire is the first run since 2026-10-01 21:10.",
+        "variant": "body"
+      }
+    },
+    "schedule_drift": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "drift_label",
+        "drift_2030",
+        "drift_today"
+      ]
+    },
+    "drift_label": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule drift has worsened from 2026-09-27/09-29:",
+        "variant": "lead"
+      }
+    },
+    "drift_2030": {
+      "type": "Text",
+      "props": {
+        "text": "2026-09-30: 41h (1.72×)",
+        "variant": "body"
+      }
+    },
+    "drift_today": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-04 (today): 71h (2.96×)",
+        "variant": "body"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocking_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocking_heading",
+        "issue_details",
+        "root_cause_stack",
+        "action_alert"
+      ]
+    },
+    "blocking_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking Issue",
+        "level": "h3"
+      }
+    },
+    "issue_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "issue_id",
+        "issue_status",
+        "issue_severity"
+      ]
+    },
+    "issue_id": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001",
+        "variant": "secondary"
+      }
+    },
+    "issue_status": {
+      "type": "Badge",
+      "props": {
+        "text": "open since 2026-09-06",
+        "variant": "outline"
+      }
+    },
+    "issue_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high",
+        "variant": "destructive"
+      }
+    },
+    "root_cause_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "root_cause_label",
+        "root_cause_text"
+      ]
+    },
+    "root_cause_label": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause:",
+        "variant": "lead"
+      }
+    },
+    "root_cause_text": {
+      "type": "Text",
+      "props": {
+        "text": "State writer's 200-character last_error truncation drops the leading error from the 2026-09-06 streak and from 2026-10-02 to 2026-10-04.",
+        "variant": "body"
+      }
+    },
+    "action_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Action Required",
+        "message": "Increase the last_error truncation cap. This is the single unblocking action needed. Operator action needed.",
+        "type": "warning"
+      }
+    }
+  }
+}
