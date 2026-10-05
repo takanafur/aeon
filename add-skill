@@ -97,16 +97,33 @@ if [[ -z "$REPO_DIR" ]]; then
   exit 1
 fi
 
-# Find all skills (directories containing SKILL.md)
+# Find all skills (directories containing SKILL.md).
+# Support nested layouts like skills/<category>/<name>/SKILL.md (depth > 2).
+# Entries stored as "name|relpath" for Bash 3.2 (no associative arrays).
 AVAILABLE=()
+SKILL_ENTRIES=()
 while IFS= read -r skill_file; do
   skill_dir=$(dirname "$skill_file")
   skill_name=$(basename "$skill_dir")
   # Skip the root directory
   if [[ "$skill_dir" != "$REPO_DIR" ]]; then
+    rel_path="${skill_dir#"$REPO_DIR"/}"
     AVAILABLE+=("$skill_name")
+    SKILL_ENTRIES+=("$skill_name|$rel_path")
   fi
-done < <(find "$REPO_DIR" -maxdepth 2 -name "SKILL.md" -type f 2>/dev/null | sort)
+done < <(find "$REPO_DIR" -name "SKILL.md" -type f 2>/dev/null | sort)
+
+resolve_skill_relpath() {
+  local name="$1"
+  local entry
+  for entry in "${SKILL_ENTRIES[@]}"; do
+    if [[ "${entry%%|*}" == "$name" ]]; then
+      echo "${entry#*|}"
+      return 0
+    fi
+  done
+  return 1
+}
 
 if [[ ${#AVAILABLE[@]} -eq 0 ]]; then
   echo "No skills found in $REPO" >&2
@@ -119,7 +136,8 @@ if [[ "$LIST_ONLY" == "true" ]]; then
   echo "Available skills in $REPO:"
   echo ""
   for skill in "${AVAILABLE[@]}"; do
-    skill_dir="$REPO_DIR/$skill"
+    rel_path=$(resolve_skill_relpath "$skill") || continue
+    skill_dir="$REPO_DIR/$rel_path"
     if [[ -f "$skill_dir/SKILL.md" ]]; then
       # Extract description from frontmatter
       desc=$(sed -n '/^---$/,/^---$/p' "$skill_dir/SKILL.md" | grep -E '^description:' | sed 's/^description: *//' | head -1)
@@ -134,7 +152,7 @@ if [[ "$LIST_ONLY" == "true" ]]; then
       if [[ -d "$SKILLS_DIR/$skill" ]]; then
         local_marker=" (installed)"
       fi
-      printf "  %-20s %s%s\n" "$skill" "$desc" "$local_marker"
+      printf "  %-28s %s%s\n" "$skill" "$desc" "$local_marker"
     fi
   done
   echo ""
@@ -195,9 +213,13 @@ FAILED=0
 for skill in "${SKILL_NAMES[@]}"; do
   [[ "$skill" == "--force" ]] && continue
 
-  src="$REPO_DIR/$skill"
+  rel_path=$(resolve_skill_relpath "$skill") || true
+  src=""
+  if [[ -n "${rel_path:-}" ]]; then
+    src="$REPO_DIR/$rel_path"
+  fi
 
-  if [[ ! -d "$src" ]] || [[ ! -f "$src/SKILL.md" ]]; then
+  if [[ -z "$src" ]] || [[ ! -d "$src" ]] || [[ ! -f "$src/SKILL.md" ]]; then
     echo "  skip: '$skill' not found in repo"
     FAILED=$((FAILED + 1))
     continue
@@ -234,8 +256,8 @@ for skill in "${SKILL_NAMES[@]}"; do
 
   # Record provenance in skills.lock
   LOCK_FILE="$(cd "$(dirname "$0")" && pwd)/skills.lock"
-  SKILL_REMOTE_PATH="skills/$skill/SKILL.md"
-  COMMIT_SHA=$(gh api "repos/$REPO/commits" -f path="$SKILL_REMOTE_PATH" --jq '.[0].sha' 2>/dev/null || echo "unknown")
+  SKILL_REMOTE_PATH="$rel_path/SKILL.md"
+  COMMIT_SHA=$(gh api "repos/$REPO/commits?path=$SKILL_REMOTE_PATH&per_page=1" --jq '.[0].sha' 2>/dev/null || echo "unknown")
   IMPORTED_AT=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 
   # Initialize lock file if missing or empty
