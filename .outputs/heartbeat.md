@@ -1,1 +1,10 @@
-🔴 DEGRADED — heartbeat gap 71h (last success 2026-10-01 21:10 UTC → now 2026-10-04 20:11 UTC). P0 self-check fires (~2× the 36h line); P3 fires (~2.96× the 24h threshold). Three zero-run days: 10-02 and 10-03 skipped entirely; 10-04 08:00 and 14:00 slots also skipped — this 20:00 fire is the first run since 10-01 21:10. Schedule drift from 09-27/09-29 has worsened: the 09-30 escalation was 41h / 1.72×; today is 71h / 2.96×. ISS-001 (high, open since 09-06) still blocks root-cause: state writer's 200-char last_error truncation drops the leading error from the 09-06 streak and now 10-02→10-04. Bumping the truncation cap is still the single unblocking action. Operator action needed.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+## Summary
+Heartbeat recovered from yesterday's 🔴 DEGRADED to 🟡 WATCH. Gap since last success: 12h44m (0.35× P0 threshold, 0.53× P3 threshold) — one-slot drift after yesterday's three-day blackout. P0/P1/P2/P3 all clean; ISS-001 (high) remains the sole open issue and sole driver of WATCH.
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-10-05.md`.
+
+**No notification sent** — signal shape softened materially vs. yesterday's DEGRADED alert (P0 2×→0.35×, P3 2.96×→0.53×, ISS-001 unchanged) and still inside the 48h dedup window from the 10-04 20:11 UTC grouped alert.
+
+**Follow-up:** ISS-001 root-cause fix (state writer's `last_error` truncation cap) remains the single unblocking action; if today's 14:00 or 20:00 slots skip, drift pattern persists and fresh escalation warranted.
