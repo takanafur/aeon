@@ -1,0 +1,171 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Autonomous self-check health"
+      },
+      "children": [
+        "alert_status",
+        "sep_1",
+        "metrics_grid",
+        "sep_2",
+        "skipped_section",
+        "sep_3",
+        "issue_section"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "heartbeat gap 47h55m since last success (2026-10-05 08:57 UTC)"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_p0",
+        "stat_p3",
+        "stat_latest"
+      ]
+    },
+    "stat_p0": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 self-check",
+        "value": "1.33×",
+        "trend": "down"
+      }
+    },
+    "stat_p3": {
+      "type": "Stat",
+      "props": {
+        "label": "P3 threshold",
+        "value": "2.0×",
+        "trend": "down"
+      }
+    },
+    "stat_latest": {
+      "type": "Stat",
+      "props": {
+        "label": "10-07 08:00 fired late",
+        "value": "53m",
+        "trend": "down"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "skipped_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skipped_heading",
+        "skipped_badges"
+      ]
+    },
+    "skipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Five slots skipped",
+        "level": "h3"
+      }
+    },
+    "skipped_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "slot1",
+        "slot2",
+        "slot3",
+        "slot4",
+        "slot5"
+      ]
+    },
+    "slot1": {
+      "type": "Badge",
+      "props": {
+        "text": "10-05 14:00",
+        "variant": "destructive"
+      }
+    },
+    "slot2": {
+      "type": "Badge",
+      "props": {
+        "text": "10-05 20:00",
+        "variant": "destructive"
+      }
+    },
+    "slot3": {
+      "type": "Badge",
+      "props": {
+        "text": "10-06 08:00",
+        "variant": "destructive"
+      }
+    },
+    "slot4": {
+      "type": "Badge",
+      "props": {
+        "text": "10-06 14:00",
+        "variant": "destructive"
+      }
+    },
+    "slot5": {
+      "type": "Badge",
+      "props": {
+        "text": "10-06 20:00",
+        "variant": "destructive"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue_heading",
+        "issue_alert"
+      ]
+    },
+    "issue_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking issue",
+        "level": "h3"
+      }
+    },
+    "issue_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "ISS-001 (high) — still open",
+        "message": "state writer last_error truncation still blocks root-cause triage of the recurring drought"
+      }
+    }
+  }
+}
