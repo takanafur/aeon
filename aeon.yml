@@ -157,6 +157,8 @@ skills:
   auto-workflow: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: URL to analyze
   onboard: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot setup validator — checks secrets/workflows/memory writability and notifies a checklist with fix commands; pair with ./onboard CLI
 
+  binance: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — Binance Spot/Futures/Convert via binance-cli (requires auth + CONFIRM for prod txs)
+
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 8,14,20 * * *" }
 
