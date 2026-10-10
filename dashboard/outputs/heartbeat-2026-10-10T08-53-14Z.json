@@ -1,0 +1,198 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Skill execution and state monitoring"
+      },
+      "children": [
+        "alert-main",
+        "separator-1",
+        "stack-content"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat gap 36h35m since 10-08 20:15 UTC",
+        "type": "error"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-execution",
+        "section-thresholds",
+        "section-drift",
+        "separator-2",
+        "section-action"
+      ]
+    },
+    "section-execution": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-exec",
+        "text-exec-gap",
+        "badge-zero-run"
+      ]
+    },
+    "heading-exec": {
+      "type": "Heading",
+      "props": {
+        "text": "Execution Gap",
+        "level": "h3"
+      }
+    },
+    "text-exec-gap": {
+      "type": "Text",
+      "props": {
+        "text": "Three skipped slots on 10-09"
+      }
+    },
+    "badge-zero-run": {
+      "type": "Badge",
+      "props": {
+        "text": "zero-run day",
+        "variant": "secondary"
+      }
+    },
+    "section-thresholds": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-thresholds",
+        "stat-p0",
+        "stat-p3"
+      ]
+    },
+    "heading-thresholds": {
+      "type": "Heading",
+      "props": {
+        "text": "Threshold Violations",
+        "level": "h3"
+      }
+    },
+    "stat-p0": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Self-Check",
+        "value": "1.017×",
+        "trend": "up"
+      }
+    },
+    "stat-p3": {
+      "type": "Stat",
+      "props": {
+        "label": "P3",
+        "value": "1.52×",
+        "trend": "up"
+      }
+    },
+    "section-drift": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-drift",
+        "stat-drift-count",
+        "text-drift-issue",
+        "text-drift-rootcause"
+      ]
+    },
+    "heading-drift": {
+      "type": "Heading",
+      "props": {
+        "text": "Drift Events",
+        "level": "h3"
+      }
+    },
+    "stat-drift-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Occurrences in ~5 weeks",
+        "value": "5"
+      }
+    },
+    "text-drift-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Same ISS-001 shape recurring"
+      }
+    },
+    "text-drift-rootcause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: state writer last_error truncated at ~200 chars blocks root-cause diagnosis",
+        "variant": "muted"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-action",
+        "text-action-pr",
+        "stat-pr-age",
+        "text-action-request"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "text-action-pr": {
+      "type": "Text",
+      "props": {
+        "text": "PR #1 draft (6th stationary heartbeat)"
+      }
+    },
+    "stat-pr-age": {
+      "type": "Stat",
+      "props": {
+        "label": "Untouched for",
+        "value": "127h+"
+      }
+    },
+    "text-action-request": {
+      "type": "Text",
+      "props": {
+        "text": "Status: merge, close, or confirm intent"
+      }
+    }
+  }
+}
