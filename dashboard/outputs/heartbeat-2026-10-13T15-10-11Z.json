@@ -1,0 +1,181 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "System health and monitoring status"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "stack_details",
+        "sep2",
+        "stack_prinfo"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Heartbeat P3 fired",
+        "message": "Gap 30h21m since 2026-10-12 08:46 UTC (1.26× the 24h threshold)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_slots",
+        "text_slots",
+        "heading_drift",
+        "text_drift",
+        "text_diagnosis",
+        "heading_selfcheck",
+        "stat_selfcheck"
+      ]
+    },
+    "heading_slots": {
+      "type": "Heading",
+      "props": {
+        "text": "Skipped Slots",
+        "level": "h3"
+      }
+    },
+    "text_slots": {
+      "type": "Text",
+      "props": {
+        "text": "10-12 14:00, 10-12 20:00, 10-13 08:00",
+        "variant": "body"
+      }
+    },
+    "heading_drift": {
+      "type": "Heading",
+      "props": {
+        "text": "Drift Events",
+        "level": "h3"
+      }
+    },
+    "text_drift": {
+      "type": "Text",
+      "props": {
+        "text": "8th drift event in ~5 weeks, same ISS-001 shape",
+        "variant": "body"
+      }
+    },
+    "text_diagnosis": {
+      "type": "Text",
+      "props": {
+        "text": "State writer last_error truncation still blocks diagnosis",
+        "variant": "muted"
+      }
+    },
+    "heading_selfcheck": {
+      "type": "Heading",
+      "props": {
+        "text": "P0 Self-Check",
+        "level": "h3"
+      }
+    },
+    "stat_selfcheck": {
+      "type": "Stat",
+      "props": {
+        "label": "Health Status",
+        "value": "0.84×",
+        "trend": "neutral"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_prinfo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_pr",
+        "stack_pr_content",
+        "heading_overall",
+        "badge_status"
+      ]
+    },
+    "heading_pr": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Status",
+        "level": "h3"
+      }
+    },
+    "stack_pr_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_pr_title",
+        "stat_untouched",
+        "stat_lastupdate",
+        "text_pr_attention"
+      ]
+    },
+    "text_pr_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #1: Binance skill draft",
+        "variant": "lead"
+      }
+    },
+    "stat_untouched": {
+      "type": "Stat",
+      "props": {
+        "label": "Untouched since open",
+        "value": "198h+"
+      }
+    },
+    "stat_lastupdate": {
+      "type": "Stat",
+      "props": {
+        "label": "Since last update",
+        "value": "177h+"
+      }
+    },
+    "text_pr_attention": {
+      "type": "Text",
+      "props": {
+        "text": "Operator attention still outstanding",
+        "variant": "muted"
+      }
+    },
+    "heading_overall": {
+      "type": "Heading",
+      "props": {
+        "text": "Overall Status",
+        "level": "h3"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "outline"
+      }
+    }
+  }
+}
