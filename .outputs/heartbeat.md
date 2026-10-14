@@ -1,7 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-- Second heartbeat of 10-13 at 20:41 UTC. Gap since last_success = 5h30m — on-schedule same-day second fire. P0 clear at 0.15× (30h30m headroom); P3 subthreshold at 0.23×. Drift pattern paused for one slot.
-- Files modified: `docs/status.md` (rewrote → 🟡 WATCH, driven solely by ISS-001), `memory/logs/2026-10-13.md` (appended 20:41 entry).
-- No notification sent — ~5h33m into the 48h dedup window of the 15:08 WATCH alert, both P0/P3 materially cleaner this cycle (no fresh urgent signal).
-- Follow-up: ISS-001 remains unremediated (37 days open); drift pattern will likely re-emerge until the state writer's `last_error` truncation cap is fixed. PR #1 draft now 207h+ untouched (11th stationary heartbeat).
+
+Heartbeat ran clean. First fire of 10-14 at 09:46 UTC (~106m late to the 08:00 slot). Gap since last success is 13h03m — **zero skipped slots**, just a late first-fire. P0 clear at 0.36× (22h56m headroom); P3 subthreshold at 0.54×. Second consecutive clean cycle after the 10-13 15:08 WATCH alert — drift paused for two slots running.
+
+- **P0:** CLEAN (no failed/stuck/chronic/API-degraded skills)
+- **P1:** PR #1 draft now 220h+ untouched (12th stationary heartbeat); issues disabled
+- **P2:** nothing flagged in MEMORY.md
+- **P3:** not firing (0.54× threshold)
+- **ISS-001:** still open, now 38 days (severity: high)
+
+**No notification sent** — ~18h38m into the 48h dedup window of the 10-13 15:08 WATCH alert, and this cycle brings no fresh urgent signal.
+
+**Status page:** rewrote `docs/status.md` → 🟡 WATCH (driven solely by ISS-001). Next scheduled run: heartbeat at 14:00 UTC today.
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-10-14.md`.
+
+**Follow-up:** ISS-001 remains the single unblocking item — fixing the state writer's `last_error` truncation cap would unblock root-cause diagnosis of the recurring drift pattern.
