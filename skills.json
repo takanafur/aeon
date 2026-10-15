@@ -1,8 +1,8 @@
 {
     "version": "1.0",
-    "generated": "2026-05-11T00:00:00Z",
+    "generated": "2026-10-05T05:23:58Z",
     "repo": "aaronjmars/aeon",
-    "total": 118,
+    "total": 119,
     "categories": {
         "research": "Research & Content",
         "dev": "Dev & Code",
@@ -38,12 +38,12 @@
         {
             "slug": "ai-framework-watch",
             "name": "AI Framework Watch",
-            "description": "Weekly competitive-intelligence digest on the AI agent framework space — momentum, releases, breaking changes across a curated 9-framework watchlist",
-            "category": "research",
+            "description": "Weekly competitive-intelligence digest on the AI agent framework space \u2014 momentum, releases, breaking changes across a curated watchlist",
+            "category": "other",
             "schedule": "30 8 * * 1",
             "var": "",
             "files": 0,
-            "sha": "0000000",
+            "sha": "8dd2270",
             "updated": "2026-05-10",
             "install": "./add-skill aaronjmars/aeon ai-framework-watch"
         },
@@ -52,7 +52,7 @@
             "name": "AIXBT Pulse",
             "description": "Cross-domain market pulse from AIXBT's free grounding endpoint \u2014 crypto, macro, tradfi, geopolitics. Refreshes taxonomy references (clusters, chains) as a bonus.",
             "category": "other",
-            "schedule": "",
+            "schedule": "0 9,21 * * *",
             "var": "",
             "files": 0,
             "sha": "29b6558",
@@ -84,6 +84,18 @@
             "install": "./add-skill aaronjmars/aeon auto-merge"
         },
         {
+            "slug": "autoresearch",
+            "name": "Autoresearch",
+            "description": "Evolve a skill by generating variations, evaluating them, and updating the best version",
+            "category": "dev",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "ba0143d",
+            "updated": "2026-04-15",
+            "install": "./add-skill aaronjmars/aeon autoresearch"
+        },
+        {
             "slug": "auto-workflow",
             "name": "Auto-Workflow Builder",
             "description": "Analyze a URL and generate a tailored aeon.yml schedule with skill suggestions",
@@ -96,16 +108,16 @@
             "install": "./add-skill aaronjmars/aeon auto-workflow"
         },
         {
-            "slug": "autoresearch",
-            "name": "Autoresearch",
-            "description": "Evolve a skill by generating variations, evaluating them, and updating the best version",
-            "category": "dev",
+            "slug": "binance",
+            "name": "binance",
+            "description": "Use binance-cli for Binance Spot, Futures (USD-S), and Convert. Requires auth.",
+            "category": "crypto",
             "schedule": "workflow_dispatch",
             "var": "",
-            "files": 0,
-            "sha": "ba0143d",
-            "updated": "2026-04-15",
-            "install": "./add-skill aaronjmars/aeon autoresearch"
+            "files": 35,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon binance"
         },
         {
             "slug": "changelog",
@@ -158,12 +170,12 @@
         {
             "slug": "contributor-spotlight",
             "name": "contributor-spotlight",
-            "description": "Weekly recognition post for one fork operator \u2014 converts fork-cohort cohort data into a named human moment (POWER fork callout with their work, stars, and skills enabled). 4-week dedup; rotates across the cohort.",
-            "category": "productivity",
+            "description": "Weekly recognition post for one fork operator \u2014 converts fork-cohort cohort data into a named human moment (POWER fork callout with their work, stars, and skills enabled)",
+            "category": "other",
             "schedule": "0 20 * * 0",
             "var": "",
             "files": 0,
-            "sha": "",
+            "sha": "5f2df07",
             "updated": "2026-05-09",
             "install": "./add-skill aaronjmars/aeon contributor-spotlight"
         },
@@ -184,7 +196,7 @@
             "name": "Create Campaign",
             "description": "Provision Meta campaigns and ad sets on AdManage.ai from a declarative config. Runs on-demand \u2014 creates entities PAUSED, writes the returned IDs back into state so schedule-ads can launch into them.",
             "category": "social",
-            "schedule": "",
+            "schedule": "workflow_dispatch",
             "var": "",
             "files": 1,
             "sha": "29b6558",
@@ -362,13 +374,13 @@
         {
             "slug": "fleet-state",
             "name": "fleet-state",
-            "description": "Weekly fleet-state digest \u2014 synthesises fork-cohort + fork-release-tracker + contributor-spotlight into one Monday-morning \"state of the fleet\" narrative with WoW deltas and a 12-week trend",
-            "category": "productivity",
+            "description": "Weekly fleet-state digest \u2014 synthesises fork-cohort, contributor-spotlight, and fork-release-tracker into one \"state of the fleet\" narrative",
+            "category": "other",
             "schedule": "0 8 * * 1",
             "var": "",
             "files": 0,
-            "sha": "pending",
-            "updated": "2026-05-13",
+            "sha": "eb829dd",
+            "updated": "2026-05-14",
             "install": "./add-skill aaronjmars/aeon fleet-state"
         },
         {
@@ -382,18 +394,6 @@
             "sha": "4a6b037",
             "updated": "2026-05-03",
             "install": "./add-skill aaronjmars/aeon fork-cohort"
-        },
-        {
-            "slug": "fork-release-tracker",
-            "name": "fork-release-tracker",
-            "description": "Weekly scan \u2014 celebrate when any fork of the parent repo cuts a tagged GitHub release. Silent when no fork releases in the window.",
-            "category": "dev",
-            "schedule": "30 19 * * 0",
-            "var": "",
-            "files": 0,
-            "sha": "pending",
-            "updated": "2026-05-12",
-            "install": "./add-skill aaronjmars/aeon fork-release-tracker"
         },
         {
             "slug": "fork-contributor-leaderboard",
@@ -418,6 +418,18 @@
             "sha": "1ea45d7",
             "updated": "2026-04-20",
             "install": "./add-skill aaronjmars/aeon fork-fleet"
+        },
+        {
+            "slug": "fork-release-tracker",
+            "name": "fork-release-tracker",
+            "description": "Weekly scan \u2014 celebrate when any fork of the parent repo cuts a tagged GitHub release. Silent when no fork releases in the window.",
+            "category": "other",
+            "schedule": "30 19 * * 0",
+            "var": "",
+            "files": 0,
+            "sha": "3404229",
+            "updated": "2026-05-12",
+            "install": "./add-skill aaronjmars/aeon fork-release-tracker"
         },
         {
             "slug": "fork-skill-digest",
@@ -523,7 +535,7 @@
             "schedule": "30 9 * * *",
             "var": "",
             "files": 0,
-            "sha": "0000000",
+            "sha": "9c36154",
             "updated": "2026-05-08",
             "install": "./add-skill aaronjmars/aeon huggingface-trending"
         },
@@ -648,18 +660,6 @@
             "install": "./add-skill aaronjmars/aeon narrative-tracker"
         },
         {
-            "slug": "on-chain-monitor",
-            "name": "On-Chain Monitor",
-            "description": "Monitor blockchain addresses and contracts for notable activity",
-            "category": "crypto",
-            "schedule": "0 12 * * *",
-            "var": "",
-            "files": 0,
-            "sha": "7d51ad7",
-            "updated": "2026-04-20",
-            "install": "./add-skill aaronjmars/aeon on-chain-monitor"
-        },
-        {
             "slug": "onboard",
             "name": "onboard",
             "description": "One-shot setup validator \u2014 runs every check from the ./onboard CLI inside the workflow and sends the resulting checklist to the configured notification channel",
@@ -670,6 +670,18 @@
             "sha": "1a8a0b5",
             "updated": "2026-04-22",
             "install": "./add-skill aaronjmars/aeon onboard"
+        },
+        {
+            "slug": "on-chain-monitor",
+            "name": "On-Chain Monitor",
+            "description": "Monitor blockchain addresses and contracts for notable activity",
+            "category": "crypto",
+            "schedule": "0 12 * * *",
+            "var": "",
+            "files": 0,
+            "sha": "7d51ad7",
+            "updated": "2026-04-20",
+            "install": "./add-skill aaronjmars/aeon on-chain-monitor"
         },
         {
             "slug": "operator-scorecard",
@@ -721,15 +733,39 @@
         },
         {
             "slug": "price-threshold-alert",
-            "name": "Price Threshold Alert",
-            "description": "Fire when the tracked token does something — new ATH, sharp 1h move, or operator-set target crossed. Silent on normal days.",
+            "name": "price-threshold-alert",
+            "description": "Fire when the tracked token does something \u2014 new ATH, sharp 1h move, or operator-set target crossed. Silent on normal days.",
             "category": "crypto",
             "schedule": "*/30 * * * *",
             "var": "",
             "files": 0,
-            "sha": "",
+            "sha": "32a48af",
             "updated": "2026-05-11",
             "install": "./add-skill aaronjmars/aeon price-threshold-alert"
+        },
+        {
+            "slug": "product-hunt-launch",
+            "name": "product-hunt-launch",
+            "description": "Draft the full Product Hunt launch asset package (tagline, description, first comment, maker comment, six-bullet feature list) from live repo state \u2014 operator reviews and submits.",
+            "category": "other",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "f60b307",
+            "updated": "2026-05-15",
+            "install": "./add-skill aaronjmars/aeon product-hunt-launch"
+        },
+        {
+            "slug": "project-lens",
+            "name": "project-lens",
+            "description": "Write an article about the project through a surprising lens \u2014 connecting it to current events, trends, philosophy, or comparable projects",
+            "category": "dev",
+            "schedule": "30 15 * * 1,3,5",
+            "var": "",
+            "files": 0,
+            "sha": "420c07f",
+            "updated": "2026-04-20",
+            "install": "./add-skill aaronjmars/aeon project-lens"
         },
         {
             "slug": "pr-review",
@@ -754,18 +790,6 @@
             "sha": "e26e7a2",
             "updated": "2026-04-29",
             "install": "./add-skill aaronjmars/aeon pr-triage"
-        },
-        {
-            "slug": "project-lens",
-            "name": "project-lens",
-            "description": "Write an article about the project through a surprising lens \u2014 connecting it to current events, trends, philosophy, or comparable projects",
-            "category": "dev",
-            "schedule": "30 15 * * 1,3,5",
-            "var": "",
-            "files": 0,
-            "sha": "420c07f",
-            "updated": "2026-04-20",
-            "install": "./add-skill aaronjmars/aeon project-lens"
         },
         {
             "slug": "push-recap",
@@ -847,8 +871,8 @@
             "schedule": "0 17 * * *",
             "var": "",
             "files": 0,
-            "sha": "6e6042c",
-            "updated": "2026-04-20",
+            "sha": "795a5a1",
+            "updated": "2026-05-07",
             "install": "./add-skill aaronjmars/aeon reply-maker"
         },
         {
@@ -940,7 +964,7 @@
             "name": "Schedule Ads",
             "description": "Schedule paid ads across Meta/TikTok/Snapchat/Pinterest/LinkedIn via the AdManage.ai API, driven by a declarative config file. Launches PAUSED by default \u2014 never auto-activates live spend.",
             "category": "social",
-            "schedule": "",
+            "schedule": "0 8 * * *",
             "var": "",
             "files": 1,
             "sha": "29b6558",
@@ -994,18 +1018,6 @@
             "sha": "56b39ea",
             "updated": "2026-05-03",
             "install": "./add-skill aaronjmars/aeon show-hn-draft"
-        },
-        {
-            "slug": "product-hunt-launch",
-            "name": "product-hunt-launch",
-            "description": "Draft the full Product Hunt launch asset package (tagline, description, first comment, maker comment, six-bullet feature list) from live repo state \u2014 operator reviews and submits.",
-            "category": "social",
-            "schedule": "workflow_dispatch",
-            "var": "",
-            "files": 0,
-            "sha": "0000000",
-            "updated": "2026-05-15",
-            "install": "./add-skill aaronjmars/aeon product-hunt-launch"
         },
         {
             "slug": "skill-analytics",
@@ -1339,8 +1351,8 @@
             "schedule": "workflow_dispatch",
             "var": "",
             "files": 0,
-            "sha": "1e52b76",
-            "updated": "2026-05-06",
+            "sha": "3450b31",
+            "updated": "2026-05-07",
             "install": "./add-skill aaronjmars/aeon v4-readiness"
         },
         {

@@ -42,7 +42,7 @@ get_category() {
     token-alert|token-movers|token-report|token-pick|monitor-runners|price-threshold-alert) echo "crypto" ;;
     on-chain-monitor|defi-monitor|defi-overview|market-context-refresh|narrative-tracker) echo "crypto" ;;
     monitor-polymarket|monitor-kalshi|polymarket-comments|unlock-monitor) echo "crypto" ;;
-    treasury-info|distribute-tokens|contributor-reward) echo "crypto" ;;
+    treasury-info|distribute-tokens|contributor-reward|binance) echo "crypto" ;;
     # Social
     write-tweet|reply-maker|remix-tweets|refresh-x|tweet-roundup|agent-buzz|farcaster-digest) echo "social" ;;
     show-hn-draft|syndicate-article) echo "social" ;;

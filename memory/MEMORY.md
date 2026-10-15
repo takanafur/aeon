@@ -15,6 +15,7 @@
 ## Skills Built
 | Skill | Date | Notes |
 |-------|------|-------|
+| binance | 2026-10-05 | From binance/binance-skills-hub; Spot/Futures/Convert via binance-cli; disabled in aeon.yml |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
